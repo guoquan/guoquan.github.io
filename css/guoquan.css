@@ -40,6 +40,10 @@ header {
     text-align: justify;
 }
 
+.papercite_highlight {
+    font-weight: bold;
+}
+
 .papercite_bibtex {
     display: none;
 }
