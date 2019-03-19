@@ -1,0 +1,6 @@
+[submodule "vendor/loading"]
+	path = vendor/loading
+	url = git@github.com:guoquan/jquery-loading.git
+[submodule "vendor/makebib"]
+	path = vendor/makebib
+	url=git@github.com:guoquan/jquery-makebib.git

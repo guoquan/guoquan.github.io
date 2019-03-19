@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/normalize/normalize.css">
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/hack/ie10-viewport-bug-workaround.css">
+    <link rel="stylesheet" type="text/css" href="vendor/loading/jquery.loading.css">
     <link rel="stylesheet" type="text/css" href="css/guoquan.css">
     <!--[if IE]>
     <link rel="stylesheet" type="text/css" href="css/guoquan-ie.css">
@@ -26,11 +27,10 @@
 <body>
     <!-- Header Begin -->
     <header>
-        <h1>郭泉 | GUO, Quan</h1>
+        <h1><a href="//guoquan.net">郭泉 | GUO, Quan</a></h1>
         <span>not blah blah every day</span>
     </header>
     <!-- Header End -->
-
 
     <div class="container">
         <div class="row">
@@ -43,14 +43,17 @@
                     <!-- Section Content -->
                     <div class="section-content">
                         <p class="lang-chiness">
-                            我是郭泉，中国<a href="http://cs.scu.edu.cn/">四川大学计算机学院</a><a href="http://www.machineilab.org/">机器智能实验室</a>的博士。
-                            我于2017年终四川大学获得博士学位，导师是<a href="http://www.machineilab.org/users/zhangyi/">章毅</a>教授，IEEE Fellow。
+                            我是郭泉，中国<a href="http://www.scu.edu.cn">四川大学</a><a href="http://cs.scu.edu.cn/">计算机学院</a>助理研究员，工作于<a href="http://www.machineilab.org/">机器智能实验室</a>。
+                            同时目前于美国<a href="https://tulane.edu">杜兰大学</a>进行博士后研究工作。
+                            我于2017年获四川大学获得博士学位，导师是<a href="http://www.machineilab.org/users/zhangyi/">章毅</a>教授，IEEE Fellow。
                             我分别于2013年和2010年在四川大学获得了理学硕士和工学学士学位。
                             <br>
                             欢迎查看我的<a href="cv-full-20171231.pdf">简历</a>、<a href="https://github.com/guoquan">GitHub页面</a>、<a href="http://www.linkedin.com/in/guoquan/zh-cn">领英页面</a>以及<a href="https://scholar.google.com/citations?user=4Yu5WHAAAAAJ">谷歌学术页面</a>。
                         </p>
                         <p class="lang-english">
-                            I am Quan Guo, Ph.D., with <a href="http://www.machineilab.org/">Machine Intelligence Lab</a> at <a href="http://cs.scu.edu.cn/">College of Computer Science</a>, <a href="http://www.scu.edu.cn/">Sichuan University</a>, China.
+                            I am Quan Guo, Ph.D., Associate Researcher at <a href="http://cs.scu.edu.cn/">College of Computer Science</a>, <a href="http://www.scu.edu.cn/">Sichuan University</a>, China,
+                            working with <a href="http://www.machineilab.org/">Machine Intelligence Lab</a>.
+                            I am also working as a Postdoc Fellow at <a href="https://tulane.edu">Tulane University</a>, USA.
                             I received my Ph.D. degree in machine intelligence from Sichuan University in 2017, supervised by Professor <a href="http://www.machineilab.org/users/zhangyi/">Zhang Yi</a>, IEEE fellow.
                             I also received my Master's degree and Bachelor's degree from Sichuan University in 2013 and 2010 respectively.
                             <br>
@@ -85,7 +88,7 @@
                         <h2><a id="publication" class="anchor" aria-hidden="true"></a>发表论文 | Publications</h2>
                     </div>
                     <!-- Section Content -->
-                    <div class="section-content pub-list">
+                    <div id="publicaton-list" class="section-content pub-list">
                         <h3 class="pub-list-subtitle">2017</h3>
                         <ul class="pub-list-list">
                             <li>
@@ -156,202 +159,11 @@
                         </ul>
                         <h3 class="pub-list-subtitle">2016</h3>
                         <ul class="pub-list-list">
-                            <li> <span class="papercite_highlight">Q. Guo</span>, J. Jia, G. Shen, L. Zhang, L. Cai, and Z. Yi, "Learning Robust Uniform Features for Cross-media Social Data by Using Cross Autoencoders," <span style="font-style: italic">Knowledge-Based Systems</span>, vol. 102, pp. 64-75, 2016. <br>
-                                <a href="#" id="papercite_1" class="papercite_toggle">[BibTeX]</a>
-                                <a href="http://dx.doi.org/10.1016/j.knosys.2016.03.028"
-                                    title="View" class="papercite_pdf">[View]</a>
-                                    <div class="papercite_bibtex" id="papercite_1_block"><pre><code class="tex bibtex">@ARTICLE{quan2016kbs,
-                        author={Quan Guo and Jia Jia and Guangyao Shen and Lei Zhang and Lianhong Cai and Zhang Yi},
-                        journal={Knowledge-Based Systems},
-                        title={Learning Robust Uniform Features for Cross-media Social Data by Using Cross Autoencoders},
-                        year={2016},
-                        volume={102},
-                        pages={64-75},
-                        url={http://dx.doi.org/10.1016/j.knosys.2016.03.028},
-                        }</code></pre>
-                                        <p></p>
-                                    </div>
-                            </li>
-                            <li> Y. Sun, H. Mao, <span class="papercite_highlight">Q. Guo</span>, and Z. Yi, "Learning a good representation with unsymmetrical auto-encoder," <span style="font-style: italic">Neural Computing and Applications</span>, vol. 27, iss. 5, pp. 1361–1367, 2016. <br>
-                                <a href="#" id="papercite_1" class="papercite_toggle">[BibTeX]</a>
-                                <a href="http://dx.doi.org/10.1007/s00521-015-1939-3"
-                                    title="View" class="papercite_pdf">[View]</a>
-                                    <div class="papercite_bibtex" id="papercite_1_block"><pre><code class="tex bibtex">@ARTICLE{yanan2016nca,
-                        author={Yanan Sun and Hua Mao and Quan Guo and Zhang Yi},
-                        journal={Neural Computing and Applications},
-                        title={Learning a good representation with unsymmetrical auto-encoder},
-                        year={2016},
-                        volume={27},
-                        number={5},
-                        pages={1361–1367},
-                        url={http://dx.doi.org/10.1007/s00521-015-1939-3},
-                        }</code></pre>
-                                        <p></p>
-                                    </div>
-                            </li>
-
-                            <li> <span class="papercite_highlight">Q. Guo</span>, J. Wang, Y. Chen, and Z. Yi, "Chinese Songci Composing with Recurrent Neural Network," <span style="font-style: italic">2016 International Conference on Frontier of Computer Science and Technology (FCST 2016)</span>, Nagasaki, Japan, Nov. 11, 2016. <br>
-                                <a href="#" id="papercite_1" class="papercite_toggle">[BibTeX]</a>
-                                    <div class="papercite_bibtex" id="papercite_1_block"><pre><code class="tex bibtex">
-                        @inproceedings{quan2016fcst,
-                        title={Chinese Songci Composing with Recurrent Neural Network},
-                        author={Quan Guo and Jianyong Wang and Yuanyuan Chen and Zhang Yi},
-                        booktitle={2016 International Conference on Frontier of Computer Science and Technology (FCST 2016)},
-                        pages={1--6},
-                        year={2016},
-                        organization={IEEE},
-                        }</code></pre>
-                                        <p></p>
-                                    </div>
-                            </li>
+                            <li> <span class="papercite_highlight">Q. Guo</span>, J. Jia, G. Shen, L. Zhang, L. Cai, and Z. Yi, "Learning Robust Uniform Features for Cross-media Social Data by Using Cross Autoencoders," <span style="font-style: italic">Knowledge-Based Systems</span>, vol. 102, pp. 64-75, 2016.</li>
+                            <li> Y. Sun, H. Mao, <span class="papercite_highlight">Q. Guo</span>, and Z. Yi, "Learning a good representation with unsymmetrical auto-encoder," <span style="font-style: italic">Neural Computing and Applications</span>, vol. 27, iss. 5, pp. 1361–1367, 2016.</li>
+                            <li><span class="papercite_highlight">Q. Guo</span>, J. Wang, Y. Chen, and Z. Yi, "Chinese Songci Composing with Recurrent Neural Network," <span style="font-style: italic">2016 International Conference on Frontier of Computer Science and Technology (FCST 2016)</span>, Nagasaki, Japan, Nov. 11, 2016.</li>
                         </ul>
-                        <h3 class="papercite">2014</h3>
-                        <ul class="papercite_bibliography">
-                            <li> 章毅, <span class="papercite_highlight">郭泉</span>, 张蕾, and 吕建成, "深度网络和认知计算," <span style="font-style: italic">中国计算机学会通讯</span>, vol. 10, iss. 2, pp. 26-32, 2014. <br> <a href="#" id="papercite_1" class="papercite_toggle">[BibTeX]</a>
-                                <a href="http://www.ccf.org.cn/sites/ccf/zlcontnry.jsp?contentId=2785161647337"
-                                    title="View" class="papercite_pdf">[View]</a>
-                                    <div class="papercite_bibtex" id="papercite_1_block"><pre><code class="tex bibtex">@ARTICLE{yi2014cccf,
-                        author={章毅 and 郭泉 and 张蕾 and 吕建成},
-                        journal={中国计算机学会通讯},
-                        title={深度网络和认知计算},
-                        year={2014},
-                        volume={10},
-                        number={2},
-                        pages={26--32},
-                        url={http://www.ccf.org.cn/sites/ccf/zlcontnry.jsp?contentId=2785161647337},
-                        }</code></pre>
-                                        <p></p>
-                                    </div>
-                            </li>
-                            <li> H. Lin, J. Jia, <span class="papercite_highlight">Q. Guo</span>, Y. Xue, Q. Li, J. Huang, L. Cai, and L. Feng, "User-level psychological stress detection from social media using deep neural network," in <span style="font-style: italic">Proceedings of the acm international conference on multimedia</span>,
-                                New York, NY, USA, 2014, pp. 507-516. <a href="http://dx.doi.org/10.1145/2647868.2654945" class="papercite_doi" title="View on publisher site">doi:10.1145/2647868.2654945</a> <br> <a href="#" id="papercite_2" class="papercite_toggle">[BibTeX]</a>                                <a href="#" id="papercite_abstract_2" class="papercite_toggle">[Abstract]</a> <a href="http://doi.acm.org/10.1145/2647868.2654945" title="View" class="papercite_pdf">[View]</a><br>
-                                <blockquote class="papercite_bibtex"
-                                    id="papercite_abstract_2_block">It is of significant importance to detect and manage stress before it turns into severe problems. However, existing stress detection methods usually rely on psychological scales or physiological devices, making the detection
-                                    complicated and costly. In this paper, we explore to automatically detect individuals' psychological stress via social media. Employing real online micro-blog data, we first investigate the correlations between users'
-                                    stress and their tweeting content, social engagement and behavior patterns. Then we define two types of stress-related attributes: 1) low-level content attributes from a single tweet, including text, images and social
-                                    interactions; 2) user-scope statistical attributes through their weekly micro-blog postings, leveraging information of tweeting time, tweeting types and linguistic styles. To combine content attributes with statistical
-                                    attributes, we further design a convolutional neural network (CNN) with cross autoencoders to generate user-scope content attributes from low-level content attributes. Finally, we propose a deep neural network (DNN)
-                                    model to incorporate the two types of user-scope attributes to detect users' psychological stress. We test the trained model on four different datasets from major micro-blog platforms including Sina Weibo, Tencent Weibo
-                                    and Twitter. Experimental results show that the proposed model is effective and efficient on detecting psychological stress from micro-blog data. We believe our model would be useful in developing stress detection tools
-                                    for mental health agencies and individuals.
-                                    <p></p>
-                                    </blockquote>
-                                    <div class="papercite_bibtex" id="papercite_2_block"><pre><code class="tex bibtex">@inproceedings{lin2014mm,
-                        author={Lin, Huijie and Jia, Jia and Guo, Quan and Xue, Yuanyuan and Li, Qi and Huang, Jie and Cai, Lianhong and Feng, Ling},
-                        title={User-level Psychological Stress Detection from Social Media Using Deep Neural Network},
-                        booktitle={Proceedings of the ACM International Conference on Multimedia},
-                        series={MM '14},
-                        year={2014},
-                        isbn={978-1-4503-3063-3},
-                        location={Orlando, Florida, USA},
-                        organization={ACM},
-                        pages={507--516},
-                        numpages={10},
-                        url={http://doi.acm.org/10.1145/2647868.2654945},
-                        doi={10.1145/2647868.2654945},
-                        acmid={2654945},
-                        publisher={ACM},
-                        address={New York, NY, USA},
-                        abstract={It is of significant importance to detect and manage stress before it turns into severe problems. However, existing stress detection methods usually rely on psychological scales or physiological devices, making the detection complicated and costly. In this paper, we explore to automatically detect individuals' psychological stress via social media. Employing real online micro-blog data, we first investigate the correlations between users' stress and their tweeting content, social engagement and behavior patterns. Then we define two types of stress-related attributes: 1) low-level content attributes from a single tweet, including text, images and social interactions; 2) user-scope statistical attributes through their weekly micro-blog postings, leveraging information of tweeting time, tweeting types and linguistic styles. To combine content attributes with statistical attributes, we further design a convolutional neural network (CNN) with cross autoencoders to generate user-scope content attributes from low-level content attributes. Finally, we propose a deep neural network (DNN) model to incorporate the two types of user-scope attributes to detect users' psychological stress. We test the trained model on four different datasets from major micro-blog platforms including Sina Weibo, Tencent Weibo and Twitter. Experimental results show that the proposed model is effective and efficient on detecting psychological stress from micro-blog data. We believe our model would be useful in developing stress detection tools for mental health agencies and individuals.},
-                        keywords={convolutional neural network, cross auto encoders, deep learning, micro-blog, social media, stress detection},
-                        }</code></pre>
-                                        <p></p>
-                                    </div>
-                            </li>
-                            <li> Z. Ren, J. Jia, <span class="papercite_highlight">Q. Guo</span>, K. Zhang, and L. Cai, "Acoustics, content and geo-information based sentiment prediction from large-scale networked voice data," in <span style="font-style: italic">Multimedia and expo (icme), 2014 ieee international conference on</span>,
-                                2014, pp. 1-4. <br> <a href="#" id="papercite_3" class="papercite_toggle">[BibTeX]</a> <a href="#" id="papercite_abstract_3" class="papercite_toggle">[Abstract]</a><br>
-                                <blockquote class="papercite_bibtex" id="papercite_abstract_3_block">Sentiment analysis from large-scale networked data attracts increasing attention in recent years. Most previous works on sentiment prediction mainly focus on text or image data. However, voice is the most natural and direct
-                                    way to express people's sentiments in real-time. With the rapid development of smart phone voice dialogue applications (e.g., Siri and Sogou Voice Assistant), the large-scale networked voice data can help us better
-                                    quantitatively understand the sentimental world we live in. In this paper, we study the problem of sentiment prediction from large-scale networked voice data. In particular, we first investigate the data observations
-                                    and underlying sentiment patterns in human-mobile voice communication. Then we propose a deep sparse neural network (DSNN) model to incorporate acoustic features, content information and geo-information to automatically
-                                    predict sentiments. The effectiveness of the proposed model is verified by the experiments on a real dataset from Sogou Voice Assistant application.
-                                    <p></p>
-                                </blockquote>
-                                <div class="papercite_bibtex" id="papercite_3_block"><pre><code class="tex bibtex">@inproceedings{ren2014icme,
-                        title={Acoustics, content and geo-information based sentiment prediction from large-scale networked voice data},
-                        author={Ren, Zhu and Jia, Jia and Guo, Quan and Zhang, Kuo and Cai, Lianhong},
-                        booktitle={Multimedia and Expo (ICME), 2014 IEEE International Conference on},
-                        pages={1--4},
-                        year={2014},
-                        organization={IEEE},
-                        abstract={Sentiment analysis from large-scale networked data attracts increasing attention in recent years. Most previous works on sentiment prediction mainly focus on text or image data. However, voice is the most natural and direct way to express people's sentiments in real-time. With the rapid development of smart phone voice dialogue applications (e.g., Siri and Sogou Voice Assistant), the large-scale networked voice data can help us better quantitatively understand the sentimental world we live in. In this paper, we study the problem of sentiment prediction from large-scale networked voice data. In particular, we first investigate the data observations and underlying sentiment patterns in human-mobile voice communication. Then we propose a deep sparse neural network (DSNN) model to incorporate acoustic features, content information and geo-information to automatically predict sentiments. The effectiveness of the proposed model is verified by the experiments on a real dataset from Sogou Voice Assistant application.}
-                        }</code></pre>
-                                    <p></p>
-                                </div>
-                            </li>
-                            <li> H. Lin, J. Jia, <span class="papercite_highlight">Q. Guo</span>, Y. Xue, J. Huang, L. Cai, and L. Feng, "Psychological stress detection from cross-media microblog data using deep sparse neural network," in <span style="font-style: italic">Multimedia and expo (icme), 2014 ieee international conference on</span>,
-                                2014, pp. 1-6. <br> <a href="#" id="papercite_4" class="papercite_toggle">[BibTeX]</a> <a href="#" id="papercite_abstract_4" class="papercite_toggle">[Abstract]</a><br>
-                                <blockquote class="papercite_bibtex" id="papercite_abstract_4_block">Long-term stress may lead to many severe physical and mental problems. Traditional psychological stress detection usually relies on the active individual participation, which makes the detection labor-consuming, time-costing
-                                    and hysteretic. With the rapid development of microblog social networks, people become more and more willing to share their moods via these platforms (e.g. Weibo, Facebook and Renren). In this paper, we propose an automatic
-                                    stress detection method from cross-media microblog data using a Deep Sparse Neural Network. We construct a three-level framework to formulate the stress detection problem. We first obtain a set of low-level features
-                                    from the tweets. Then, we define and extract middle-level representations based on psychological and art theories: linguistic attributes from tweets’ texts, visual attributes from tweets’ images, and social attributes
-                                    from tweets’ comments, retweets and favorites. Finally, a Deep Sparse Neural Network is designed to learn the stress categories incorporating the cross-media attributes. Experiment results show that the proposed method
-                                    is effective and efficient on detecting psychological stress from microblog data.
-                                    <p></p>
-                                </blockquote>
-                                <div class="papercite_bibtex" id="papercite_4_block"><pre><code class="tex bibtex">@inproceedings{lin2014icme,
-                        title={Psychological stress detection from cross-media microblog data using Deep Sparse Neural Network},
-                        author={Lin, Huijie and Jia, Jia and Guo, Quan and Xue, Yuanyuan and Huang, Jie and Cai, Lianhong and Feng, Ling},
-                        booktitle={Multimedia and Expo (ICME), 2014 IEEE International Conference on},
-                        pages={1--6},
-                        year={2014},
-                        organization={IEEE},
-                        abstract={Long-term stress may lead to many severe physical and mental problems. Traditional psychological stress detection usually relies on the active individual participation, which makes the detection labor-consuming, time-costing and hysteretic. With the rapid development of microblog social networks, people become more and more willing to share their moods via these platforms (e.g. Weibo, Facebook and Renren). In this paper, we propose an automatic stress detection method from cross-media microblog data using a Deep Sparse Neural Network. We construct a three-level framework to formulate the stress detection problem. We first obtain a set of low-level features from the tweets. Then, we define and extract middle-level representations based on psychological and art theories: linguistic attributes from tweets’ texts, visual attributes from tweets’ images, and social attributes from tweets’ comments, retweets and favorites. Finally, a Deep Sparse Neural Network is designed to learn the stress categories incorporating the cross-media attributes. Experiment results show that the proposed method is effective and efficient on detecting psychological stress from microblog data.}
-                        }</code></pre>
-                                    <p></p>
-                                </div>
-                            </li>
-                        </ul>
-                        <h3 class="papercite">2013</h3>
-                        <ul class="papercite_bibliography">
-                            <li> <span class="papercite_highlight">Q. Guo</span>, L. Zhang, S. Wang, and Z. Yi, "Rigid image registration via column sparse optimisation for seal registration," <span style="font-style: italic">Electronics letters</span>, vol.
-                                49, iss. 17, pp. 1069-1071, 2013. <a href="http://dx.doi.org/10.1049/el.2013.0835" class="papercite_doi" title="View on publisher site">doi:10.1049/el.2013.0835</a> <br> <a href="#" id="papercite_0" class="papercite_toggle">[BibTeX]</a>                                <a href="#" id="papercite_abstract_0" class="papercite_toggle">[Abstract]</a><br>
-                                <blockquote class="papercite_bibtex" id="papercite_abstract_0_block">Image registration is an essential and important process in seal identification. Rigid image registration in seal identification is known to be more suitable than elastic registration. The registration process is quite
-                                    sensitive to outliers in matched feature point pairs. A novel method to take the matching outliers as data corrupted by 'samplespecific' error which can be modelled by a column sparse matrix is proposed. An optimisation
-                                    problem is developed to describe this model. By solving the optimisation problem, corruption can be eliminated and the transformation model can be recovered simultaneously. An efficient algorithm called column sparse
-                                    registration is given via the augmented Lagrange multiplier method. Experiments on real-world seal registration data demonstrate that the proposed method is robust to outliers among matched pairs and outperforms the
-                                    state-of-the-art methods.
-                                    <p></p>
-                                </blockquote>
-                                <div class="papercite_bibtex" id="papercite_0_block"><pre><code class="tex bibtex">@article{guo2013rigid,
-                        title={Rigid image registration via column sparse optimisation for seal registration},
-                        author={Guo, Quan and Zhang, Lei and Wang, Sheng and Yi, Zhang},
-                        journal={Electronics Letters},
-                        volume={49},
-                        number={17},
-                        pages={1069--1071},
-                        year={2013},
-                        publisher={IET},
-                        doi={10.1049/el.2013.0835},
-                        ISSN={0013-5194},
-                        abstract={Image registration is an essential and important process in seal identification. Rigid image registration in seal identification is known to be more suitable than elastic registration. The registration process is quite sensitive to outliers in matched feature point pairs. A novel method to take the matching outliers as data corrupted by 'samplespecific' error which can be modelled by a column sparse matrix is proposed. An optimisation problem is developed to describe this model. By solving the optimisation problem, corruption can be eliminated and the transformation model can be recovered simultaneously. An efficient algorithm called column sparse registration is given via the augmented Lagrange multiplier method. Experiments on real-world seal registration data demonstrate that the proposed method is robust to outliers among matched pairs and outperforms the state-of-the-art methods.},
-                        keywords={document image processing;feature extraction;image matching;image registration;optimisation;sparse matrices;ALM method;augmented Lagrange multiplier method;column sparse matrix;column sparse optimisation;column sparse registration;corruption elimination;feature point pair matching;rigid image registration;sample-specific error;seal identification;seal registration;transformation model}
-                        }</code></pre>
-                                    <p></p>
-                                </div>
-                            </li>
-                            <li> 郭泉, "稀疏表达及其在图像处理中的应用," Master Thesis, 2013. <br> <a href="#" id="papercite_5" class="papercite_toggle">[BibTeX]</a> <a href="#" id="papercite_abstract_5" class="papercite_toggle">[Abstract]</a><br>
-                                <blockquote class="papercite_bibtex"
-                                    id="papercite_abstract_5_block">稀疏表达即稀疏表示,是通过过完备字典中最少的元素线性组合对信号进行表达。在人类低级及中级视觉中,神经元在视觉通路中表现出对不同颜色、纹理、朝向、大小的刺激的强烈选择性。对于外部的影像信号,这些视觉神经元的活动具有高度稀疏性。受到这一点的启发,伴随着数据字典概念的兴起,稀疏表达理论迅速的发展起来。稀疏表达即通过一个过完备字典中的元素进行线性组合以表达一个新的数据,并要求这样的线性组合中采用的字典中的元素尽可能少。这样的表达有非常丰富的性质,可以应用于信号压缩、数据重建、子空间聚类、分类等问题。与稀疏表达类似,低秩表达对一组表达问题求解,并要求这一组表达所组成的矩阵满足秩尽量可能低的性质。秩是刻画系统复杂程度的度量,这样的要求使得我们获得的解在宏观结构上简单有条理。低秩表达被应用于子空间聚类等任务。
-                                    稀疏表达存在着唯一性条件,当满足一定条件,可以证明最稀疏的解是唯一的。正交匹配追赶法和基追赶法从不同角度解决了稀疏表达的问题,在满足互相关性的唯一条件时,他们的解是等价的,而且就是稀疏表达问题的唯一解。 低秩表达问题本身是非确定多项式时间的问题,且不存在唯一解,通过核范数替换,可以证明存在一个封闭的唯一解,同时也是一个秩最低的解。 通过证明和分析稀疏表达和低秩表达中的算法,提出将稀疏表达应用于图像数据挖掘中的分类任务中。并利用分类性能函数,结合局部分类度量和基于全局表达的全局度量,设计出新的分类度量。将其应用在图像分类问题上,取得了显著的效果。
-                                    针对印章自动识别系统中的印章配准问题,由于复杂的背景和印章上重复的形状,导致很可能存在错误匹配的离群点。为了解决这个问题,提出采用列稀疏问题描述离群点的刚性图像配准问题,并在交替方向乘子法的框架下实现了基于列稀疏优化的刚性图像配准算法。实验证明,所提出的算法在运行效率和准确率上都十分出色。
-                                    <p></p>
-                                    </blockquote>
-                                    <div class="papercite_bibtex" id="papercite_5_block"><pre><code class="tex bibtex">@mastersthesis{guo2013thesis,
-                        title={稀疏表达及其在图像处理中的应用},
-                        author={郭泉},
-                        year={2013},
-                        school={Sichuan University},
-                        abstract={稀疏表达即稀疏表示,是通过过完备字典中最少的元素线性组合对信号进行表达。在人类低级及中级视觉中,神经元在视觉通路中表现出对不同颜色、纹理、朝向、大小的刺激的强烈选择性。对于外部的影像信号,这些视觉神经元的活动具有高度稀疏性。受到这一点的启发,伴随着数据字典概念的兴起,稀疏表达理论迅速的发展起来。稀疏表达即通过一个过完备字典中的元素进行线性组合以表达一个新的数据,并要求这样的线性组合中采用的字典中的元素尽可能少。这样的表达有非常丰富的性质,可以应用于信号压缩、数据重建、子空间聚类、分类等问题。与稀疏表达类似,低秩表达对一组表达问题求解,并要求这一组表达所组成的矩阵满足秩尽量可能低的性质。秩是刻画系统复杂程度的度量,这样的要求使得我们获得的解在宏观结构上简单有条理。低秩表达被应用于子空间聚类等任务。
-                        稀疏表达存在着唯一性条件,当满足一定条件,可以证明最稀疏的解是唯一的。正交匹配追赶法和基追赶法从不同角度解决了稀疏表达的问题,在满足互相关性的唯一条件时,他们的解是等价的,而且就是稀疏表达问题的唯一解。 低秩表达问题本身是非确定多项式时间的问题,且不存在唯一解,通过核范数替换,可以证明存在一个封闭的唯一解,同时也是一个秩最低的解。
-                        通过证明和分析稀疏表达和低秩表达中的算法,提出将稀疏表达应用于图像数据挖掘中的分类任务中。并利用分类性能函数,结合局部分类度量和基于全局表达的全局度量,设计出新的分类度量。将其应用在图像分类问题上,取得了显著的效果。
-                        针对印章自动识别系统中的印章配准问题,由于复杂的背景和印章上重复的形状,导致很可能存在错误匹配的离群点。为了解决这个问题,提出采用列稀疏问题描述离群点的刚性图像配准问题,并在交替方向乘子法的框架下实现了基于列稀疏优化的刚性图像配准算法。实验证明,所提出的算法在运行效率和准确率上都十分出色。},
-                        keywords={稀疏表达, 低秩表达, 性能函数, 图像分类, 图像配准},
-                        }</code></pre>
-                                        <p></p>
-                                    </div>
-                            </li>
-                        </ul>
+                        <h3 class="pub-list-subtitle">More lists are loading...</h3>
                     </div>
                 </section>
 
@@ -411,7 +223,11 @@
                     <!-- Section Content -->
                     <div class="section-content">
                         <h3>电子邮件 | Email</h3>
-                        <p>guoquanscu[at]gmail.com</p>
+                        <p>
+                          <a class="email-addr"><span class="email-addr-local">guoquanscu</span><span class="email-addr-domain">gmail.com</span></a><br>
+                          <a class="email-addr"><span class="email-addr-local">guoquan</span><span class="email-addr-domain">scu.edu.cn</span></a><br>
+                          <a class="email-addr"><span class="email-addr-local">qguo2</span><span class="email-addr-domain">tulane.edu</span></a>
+                        </p>
                         <h3>地址 | Address</h3>
                         <address>
                             基础教学楼B座B320室<br>
@@ -449,16 +265,16 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="scrollup" role="complementary"><span class="glyphicon glyphicon-chevron-up"></span></div>
             </div>
         </div>
     </div>
-
 
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Last update: 2017-12-31 | &copy; Copyright 2017, <a href="http://guoquan.org">GUO, Quan</a></p>
+                    <p>Last updated: <span id="last-updated">03/19/2019</span> | &copy; Copyright 2019, <a href="//guoquan.net">GUO, Quan</a></p>
                 </div>
             </div>
         </div>
@@ -468,7 +284,10 @@
     <script type="text/javascript" src="vendor/jquery/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="vendor/bootstrap/hack/ie10-viewport-bug-workaround.js"></script>
-    <script type="text/javascript" src="vendor/scrollup/jquery.scrollUp.min.js"></script>
+    <script type="text/javascript" src="vendor/scrollup/scrollup-3.0.0-dev.min.js"></script>
+    <script type="text/javascript" src="vendor/loading/jquery.loading.js"></script>
+    <script type="text/javascript" src="vendor/citation.js/citation-0.4.0-11.min.js"></script>
+    <script type="text/javascript" src="vendor/makebib/jquery.makebib.js"></script>
     <script type="text/javascript" src="js/guoquan.js"></script>
 
 </body>
