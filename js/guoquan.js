@@ -15,7 +15,7 @@
     const regex_url = /\(URL: (.*)\)/g;
     html = html.replace(regex_name, "<strong>Quan Guo</strong>");
     html = html.replace(regex_name_cn, "<strong>$1</strong>");
-    html = html.replace(regex_doi, " <span class=\"doi\"><a href=\"http://dx.doi.org/$1\">DOI $1</a>.</span>");
+    html = html.replace(regex_doi, " <span class=\"doi\"><a href=\"https://dx.doi.org/$1\">DOI $1</a>.</span>");
     html = html.replace(regex_url, " <span class=\"url\"><a href=\"$1\">Link</a>.</span>");
     return html;
   };
