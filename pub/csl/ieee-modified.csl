@@ -231,6 +231,15 @@
       </if>
     </choose>
   </macro>
+  <macro name="note">
+    <choose>
+      <if variable="NOTE">
+        <!-- <group prefix="(" suffix=")"> -->
+          <text variable="NOTE" prefix="[" suffix="]" />
+        <!-- </group> -->
+      </if>
+    </choose>
+  </macro>
   <macro name="citation-locator">
     <group delimiter=" ">
       <choose>
@@ -268,7 +277,7 @@
         <!-- Specific Formats -->
         <if type="article-journal">
           <group delimiter=", ">
-            <text macro="a222ccess"/>
+            <text macro="access"/>
             <text macro="title"/>
             <text variable="container-title" font-style="italic" form="short"/>
             <text macro="locators"/>
@@ -398,5 +407,7 @@
     <!-- doi -->
     <text macro="doi"/>
     <text macro="url"/>
+    <text macro="note"/>
+    <text macro="access"/>
   </bibliography>
 </style>
