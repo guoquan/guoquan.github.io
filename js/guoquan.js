@@ -13,10 +13,19 @@
     const regex_name_cn = /(郭泉)/g;
     const regex_doi = /\(DOI: ([^\s]*)\)/g;
     const regex_url = /\(URL: ([^\s]*)\)/g;
+    const regex_note = /\(NOTE: ([^\s]*)\)/g;
     html = html.replace(regex_name, "<strong>Quan Guo</strong>");
     html = html.replace(regex_name_cn, "<strong>$1</strong>");
     html = html.replace(regex_doi, " <span class=\"doi\"><a href=\"https://dx.doi.org/$1\">DOI: $1</a>.</span>");
     html = html.replace(regex_url, " <span class=\"url\"><a href=\"$1\">Link</a>.</span>");
+    html = html.replace(regex_note, " <span class=\"note\">$1</span>");
+    html = $(html);
+    html.find("span.note").each(function () {
+        const node = $(this);
+        const note_md_res = marked.parseInline(node.html(), {"gfm": true});
+        node.html(note_md_res);
+    });
+    html = html.html();
     return html;
   };
 

@@ -234,9 +234,9 @@
   <macro name="note">
     <choose>
       <if variable="NOTE">
-        <!-- <group prefix="(" suffix=")"> -->
-          <text variable="NOTE" prefix="[" suffix="]" />
-        <!-- </group> -->
+        <group prefix="(" suffix=")">
+          <text variable="note" prefix="NOTE: " />
+        </group>
       </if>
     </choose>
   </macro>
@@ -277,7 +277,7 @@
         <!-- Specific Formats -->
         <if type="article-journal">
           <group delimiter=", ">
-            <text macro="access"/>
+            <!-- <text macro="access"/> -->
             <text macro="title"/>
             <text variable="container-title" font-style="italic" form="short"/>
             <text macro="locators"/>
@@ -408,6 +408,5 @@
     <text macro="doi"/>
     <text macro="url"/>
     <text macro="note"/>
-    <text macro="access"/>
   </bibliography>
 </style>
