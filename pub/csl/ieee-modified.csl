@@ -233,7 +233,7 @@
   </macro>
   <macro name="note">
     <choose>
-      <if variable="NOTE">
+      <if variable="note">
         <group prefix="(" suffix=")">
           <text variable="note" prefix="NOTE: " />
         </group>
