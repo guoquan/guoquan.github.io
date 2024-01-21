@@ -136,12 +136,13 @@ footer {
 }
 
 ul#teaching-list li ul {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 ul#teaching-list li ul li {
+    list-style-type: none;
     margin-right: 10px;
 }
 
