@@ -135,17 +135,17 @@ footer {
     padding: 4px 0;
 }
 
-#teaching-list li ul li ul {
+ul#teaching-list li ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-#teaching-list li ul li ul li {
+ul#teaching-list li ul li {
     margin-right: 10px;
 }
 
-#teaching-list li ul li ul li:not(:last-child)::after {
+ul#teaching-list li ul li:not(:last-child)::after {
     content: "|";
     margin-left: 10px;
 }
