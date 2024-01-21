@@ -135,13 +135,14 @@ footer {
     padding: 4px 0;
 }
 
-ul#teaching-list li ul {
-    /* display: flex;
+/* ul#teaching-list li ul {
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; */
-}
+    justify-content: space-between;
+} */
 
 ul#teaching-list li ul li {
+    display: inline;
     list-style-type: none;
     margin-right: 10px;
 }
