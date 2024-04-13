@@ -341,7 +341,7 @@
                     <text variable="collection-title"/>
                   </group>
                   <text macro="locators"/>
-                </fi>
+                </if>
               </choose>
               <text macro="publisher"/>
               <text macro="issued"/>
