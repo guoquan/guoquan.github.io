@@ -21,6 +21,10 @@ h2 {
     padding-bottom: 3px;
 }
 
+.notice-header h2 {
+    border-bottom: none;
+}
+
 header {
     text-align: center;
 }
@@ -30,6 +34,10 @@ header {
     padding-right: 4px;
     margin-left: -20px;
     line-height: 1;
+}
+
+.highlighted {
+    color: #b73338;
 }
 
 .sidebar nav.affix {
@@ -53,7 +61,7 @@ header {
 
 @media (max-width: 767px) {
     .sidebar nav.affix {
-      position: static;
+        position: static;
     }
 }
 
