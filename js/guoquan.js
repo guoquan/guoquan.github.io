@@ -13,7 +13,7 @@
     const regex_name_cn = /(郭泉)/g;
     const regex_doi = /\(DOI: ([^\s]*)\)/g;
     const regex_url = /\(URL: ([^\s]*)\)/g;
-    const regex_note = /\(NOTE: ([^\s]*)\)/g;
+    const regex_note = /\(NOTE: ([^()]*(?:\([^()]*\)[^()]*)*)\)/g;
     html = html.replace(regex_name, "<strong>Quan Guo</strong>");
     html = html.replace(regex_name_cn, "<strong>$1</strong>");
     html = html.replace(regex_doi, " <span class=\"doi\"><a href=\"https://dx.doi.org/$1\">DOI: $1</a>.</span>");
