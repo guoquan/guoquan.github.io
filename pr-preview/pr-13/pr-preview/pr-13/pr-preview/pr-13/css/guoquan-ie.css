@@ -1,0 +1,4 @@
+.section-content p {
+    text-align-last: justify;
+    text-justify: distribute;
+}
