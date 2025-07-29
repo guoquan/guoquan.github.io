@@ -12,3 +12,4 @@ Visit [guoquan.net](https://guoquan.net) to see the website.
 ### Pull Request Preview
 
 Pull requests automatically deploy a preview version to GitHub Pages. Check the PR status checks for a preview URL before merging.
+The preview ignores the `CNAME` file so it uses the default `github.io` domain rather than the production custom domain.
