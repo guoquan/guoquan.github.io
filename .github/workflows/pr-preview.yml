@@ -35,4 +35,4 @@ jobs:
         with:
           source-dir: ./_site
           preview-branch: main
-          pages-base-url: ${{ github.repository_owner }}.github.io/
+          pages-base-url: ${{ github.repository_owner }}.github.io
