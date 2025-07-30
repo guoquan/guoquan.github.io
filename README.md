@@ -6,12 +6,3 @@
 Source code for my academic portfolio website featuring research in AI, publications, and teaching activities.
 
 Visit [guoquan.net](https://guoquan.net) to see the website.
-
-## Development Guidelines
-
-### Pull Request Preview
-
-Pull requests automatically deploy a preview version to GitHub Pages. Check the
-PR status checks for a preview URL under the `pr-preview/` path before merging.
-Previews deploy to the `main` branch using the repository’s default
-`github.io` domain instead of the custom domain.
