@@ -17,3 +17,5 @@ Previews deploy to a dedicated `pr-preview` branch using the repository’s
 default `github.io` domain instead of the custom domain.
 The preview directory is excluded from builds and is automatically
 removed when a pull request is closed.
+CI waits for the preview URL to become reachable before marking the check
+as successful.
