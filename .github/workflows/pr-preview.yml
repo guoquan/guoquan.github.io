@@ -44,7 +44,7 @@ jobs:
           url="${{ steps.deploy.outputs.preview-url }}"
           echo "Checking $url for availability"
           for i in {1..20}; do
-            status=$(curl -o /dev/null -s -w "%{http_code}" "$url")
+            status=$(curl -L -o /dev/null -s -w "%{http_code}" "$url")
             echo "Attempt $i status: $status"
             if [ "$status" = "200" ]; then
               echo "Preview is live"
