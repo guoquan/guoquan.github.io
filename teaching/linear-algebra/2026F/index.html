@@ -1,1 +1,441 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="郭泉的2026F 线性代数：课程大纲、学期安排与交互演示。"><title>2026F 线性代数 · 郭泉</title><link rel="stylesheet" href="/teaching/assets/course.css"></head><body><header><a href="/">郭泉 / Quan Guo</a><nav aria-label="课程导航"><a href="/teaching/">Teaching</a><a href="/teaching/linear-algebra/">线性代数</a><a href="/teaching/linear-algebra/2026F/" aria-current="page">2026F</a></nav></header><main><section class="hero"><p class="eyebrow">2026 Fall · Linear Algebra</p><h1>线性代数 · 2026F</h1><p class="lead">从一杯咖啡的配比，到向量、矩阵与线性方程组。</p><p class="meta">2026 年秋季 · 计算机科学与技术专业 · 03 / 04 班<br>周二、周三晚，第 10—12 节 · 共 16 次晚课，每次 3 学时</p><nav aria-label="页内导航"><a href="#schedule">教学安排</a><a href="../#outline">课程知识大纲</a><a href="../#demos">共享演示</a></nav></section><section class="section" id="schedule"><h2>教学安排</h2><p>教学第 1 周从 10 月 13 日开始。下表为本学期计划，将随课堂进度更新；考试时间以正式通知为准。</p><div class="table-wrap" tabindex="0" role="region" aria-label="教学安排表，可横向滚动"><table><caption>教学周 / 校历周（校历周次待核对） · 日期均为 2026 年</caption><thead><tr><th scope="col">教学 / 校历周</th><th scope="col">日期 / 晚课</th><th scope="col">课堂主题与材料</th></tr></thead><tbody><tr class="week-start"><td>1 / 6</td><td>10 月 13 日 · 二<br><span class="meta">N1</span></td><td>线性组合、张成与维数的直觉；线性方程组及矩阵形式。<div class="resource-links"><a href="../demos/cofficients/">Cofficients · 咖啡与系数</a><a href="../demos/linvis/">LinVis · 向量与空间</a></div></td></tr><tr class=""><td>1 / 6</td><td>10 月 14 日 · 三<br><span class="meta">N2</span></td><td>线性方程组与矩阵基础；矩阵线性运算、乘法三视角与 Ax 的列组合。</td></tr><tr class="week-start"><td>2 / 7</td><td>10 月 20 日 · 二<br><span class="meta">N3</span></td><td>转置、对称阵、分块矩阵；矩阵运算习题。</td></tr><tr class=""><td>2 / 7</td><td>10 月 21 日 · 三<br><span class="meta">N4</span></td><td>初等变换、初等矩阵与行阶梯形。</td></tr><tr class="week-start"><td>3 / 8</td><td>10 月 27 日 · 二<br><span class="meta">N5</span></td><td>可逆矩阵的代数定义与初等变换求逆。</td></tr><tr class=""><td>3 / 8</td><td>10 月 28 日 · 三<br><span class="meta">N6</span></td><td>矩阵的秩、有解判定与通解；综合习题。</td></tr><tr class="week-start"><td>4 / 9</td><td>11 月 3 日 · 二<br><span class="meta">N7</span></td><td>二阶、三阶行列式的几何意义与 n 阶定义。</td></tr><tr class=""><td>4 / 9</td><td>11 月 4 日 · 三<br><span class="meta">N8</span></td><td>行列式性质、按行展开与伴随矩阵求逆。</td></tr><tr class="week-start"><td>5 / 10</td><td>11 月 10 日 · 二<br><span class="meta">N9</span></td><td>克拉默法则、可逆条件总结；行列式习题。</td></tr><tr class=""><td>5 / 10</td><td>11 月 11 日 · 三<br><span class="meta">N10</span></td><td>向量组的线性组合、线性相关与无关。</td></tr><tr class="week-start"><td>6 / 11</td><td>11 月 17 日 · 二<br><span class="meta">N11</span></td><td>向量组的秩与极大无关组。</td></tr><tr class=""><td>6 / 11</td><td>11 月 18 日 · 三<br><span class="meta">N12</span></td><td>方程组解的结构；第 1—3 章复习。</td></tr><tr class="week-start"><td>7 / 12</td><td>11 月 24 日 · 二<br><span class="meta">N13</span></td><td>段考与讲评（暂定，范围为第 1—3 章）。</td></tr><tr class=""><td>7 / 12</td><td>11 月 25 日 · 三<br><span class="meta">N14</span></td><td>段考讲评；内积、正交向量组与施密特正交化。</td></tr><tr class="week-start"><td>8 / 13</td><td>12 月 1 日 · 二<br><span class="meta">N15</span></td><td>特征值、特征向量、相似与对角化。</td></tr><tr class=""><td>8 / 13</td><td>12 月 2 日 · 三<br><span class="meta">N16</span></td><td>对称矩阵对角化、二次型与正定性。</td></tr></tbody></table></div><p class="meta" style="margin-top:20px">12 月 7—20 日：机动与答疑。期末考试安排另行通知。</p></section><section class="section"><h2>课堂之外，继续动手</h2><div class="grid"><article class="card"><p class="eyebrow">Cofficients</p><h3>咖啡师的线性代数</h3><p>浓缩咖啡、牛奶与水构成原料空间。拖动系数或坐标点，观察线性组合、满杯线与满杯面。</p><a class="button" href="/teaching/linear-algebra/demos/cofficients/">进入 Cofficients</a></article><article class="card"><p class="eyebrow">LinVis</p><h3>看见向量与空间</h3><p>通过交互向量探索线性组合、张成、线性相关与秩，连接几何图像和代数表达。</p><a class="button" href="/teaching/linear-algebra/demos/linvis/">进入 LinVis</a></article></div><p class="meta" style="margin-top:20px">演示归入课程共享资源，各学期使用同一入口。</p></section></main><footer>广西民族大学 · 人工智能学院 · 郭泉<br>课程材料持续更新；具体教学与考试安排以课堂通知为准。</footer></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="郭泉的2026F 线性代数：课程大纲、学期安排与交互演示。">
+<title>2026F 线性代数 · 郭泉</title>
+<link rel="stylesheet" href="/teaching/assets/course.css">
+</head>
+<body>
+<header>
+<a href="/">郭泉 / Quan Guo</a>
+<nav aria-label="课程导航">
+<a href="/teaching/">Teaching</a>
+<a href="/teaching/linear-algebra/">线性代数</a>
+<a href="/teaching/linear-algebra/2026F/" aria-current="page">2026F</a>
+</nav>
+</header>
+<main>
+<section class="hero">
+<p class="eyebrow course-title-en" lang="en">Linear Algebra · 2026F</p>
+<h1>线性代数 · 2026F</h1>
+<p class="meta">2026 年秋季 · 计算机科学与技术专业 · 03 / 04 班<br>周二、周三 · 第 10—12 节 · 共 16 次课，每次 3 学时</p>
+<nav aria-label="页内导航">
+<a href="#schedule">教学安排</a>
+<a href="../#outline">课程知识大纲</a>
+<a href="../#resources">教学资源</a>
+</nav>
+</section>
+<section class="section" id="schedule">
+<h2>教学安排</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="教学安排表，可横向滚动">
+<table>
+<thead>
+<tr>
+<th scope="col">周<span class="th-note">教学 / 校历</span>
+</th>
+<th scope="col">日期 / 讲次</th>
+<th scope="col">主题与学习内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="week-start">
+<td>1 / 6</td>
+<td>10 月 13 日 · 二<br>
+<span class="meta">第 1 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">什么是线性代数？</h3>
+<p class="lesson-points">线性组合、张成与维数的直觉；线性方程组及矩阵形式。</p>
+<p class="textbook">教材：第 2 章 §1 · 线性方程组和矩阵（导入）</p>
+<details class="lesson-details" open>
+<summary>资料与课后任务</summary>
+<dl>
+<dt>资料与互动</dt>
+<dd>
+<div class="resource-links">
+<a href="../demos/cofficients/">Cofficients · 咖啡与系数</a>
+<a href="../demos/linvis/">LinVis · 向量与空间</a>
+</div>
+</dd>
+<dt>课后一周任务</dt>
+<dd>作业 3 题；10 月 14 日 18:00 前在学习通提交。</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="">
+<td>1 / 6</td>
+<td>10 月 14 日 · 三<br>
+<span class="meta">第 2 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">矩阵怎样记录和组合线性关系？</h3>
+<p class="lesson-points">线性方程组与矩阵基础；矩阵线性运算、乘法三视角与 Ax 的列组合。</p>
+<p class="textbook">教材：第 2 章 §1—§2 · 线性方程组和矩阵、矩阵的运算</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>资料与互动</dt>
+<dd>
+<div class="resource-links">
+<a href="../demos/linvis/">LinVis · 向量与空间</a>
+</div>
+</dd>
+<dt>课后一周任务</dt>
+<dd>矩阵运算作业 10—12 题：加法、数乘、乘法、可乘条件与 AB / BA 对比（含 2 道判断题）；10 月 20 日 12:00 前在学习通提交。</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="week-start">
+<td>2 / 7</td>
+<td>10 月 20 日 · 二<br>
+<span class="meta">第 3 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">把矩阵转置或分块，会改变什么？</h3>
+<p class="lesson-points">转置、对称阵、分块矩阵；矩阵运算习题。</p>
+<p class="textbook">教材：第 2 章 §2、§5 · 矩阵的运算、矩阵分块法</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>资料与互动</dt>
+<dd>
+<div class="resource-links">
+<a href="../resources/flipped-qa/">翻转答疑 · 实践说明</a>
+</div>
+</dd>
+<dt>课后一周任务</dt>
+<dd>翻转答疑 · 实践 2（第 2 章）<span class="task-status">计划</span>
+<br>10 月 20 日课后—10 月 27 日 12:00；在学习通帮助 AI 同学完成两道题并验算。</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="">
+<td>2 / 7</td>
+<td>10 月 21 日 · 三<br>
+<span class="meta">第 4 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">怎样把方程组化成更容易解的形式？</h3>
+<p class="lesson-points">初等变换、初等矩阵与行阶梯形。</p>
+<p class="textbook">教材：第 3 章 §1 · 矩阵的初等变换</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>课后一周任务</dt>
+<dd class="meta">待布置</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="week-start">
+<td>3 / 8</td>
+<td>10 月 27 日 · 二<br>
+<span class="meta">第 5 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">一个线性变换什么时候可以倒过来？</h3>
+<p class="lesson-points">可逆矩阵的代数定义与初等变换求逆。</p>
+<p class="textbook">教材：第 2 章 §3 · 逆矩阵；第 3 章 §1 · 矩阵的初等变换</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>课后一周任务</dt>
+<dd class="meta">待布置</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="">
+<td>3 / 8</td>
+<td>10 月 28 日 · 三<br>
+<span class="meta">第 6 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">方程组有没有解，又有多少个解？</h3>
+<p class="lesson-points">矩阵的秩、有解判定与通解；综合习题。</p>
+<p class="textbook">教材：第 3 章 §2—§3 · 矩阵的秩、线性方程组的解</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>资料与互动</dt>
+<dd>
+<div class="resource-links">
+<a href="../resources/flipped-qa/">翻转答疑 · 实践说明</a>
+</div>
+</dd>
+<dt>课后一周任务</dt>
+<dd>翻转答疑 · 实践 3（第 3 章）<span class="task-status">计划</span>
+<br>10 月 28 日课后—11 月 3 日 12:00；在学习通帮助 AI 同学完成两道题并验算。</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="week-start">
+<td>4 / 9</td>
+<td>11 月 3 日 · 二<br>
+<span class="meta">第 7 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">行列式怎样测量面积与体积？</h3>
+<p class="lesson-points">二阶、三阶行列式的几何意义与 n 阶定义。</p>
+<p class="textbook">教材：第 1 章 §1、§3 · 二阶与三阶行列式、n 阶行列式的定义</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>课后一周任务</dt>
+<dd class="meta">待布置</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="">
+<td>4 / 9</td>
+<td>11 月 4 日 · 三<br>
+<span class="meta">第 8 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">行列式怎样算，又怎样帮助求逆？</h3>
+<p class="lesson-points">行列式性质、按行展开与伴随矩阵求逆。</p>
+<p class="textbook">教材：第 1 章 §4—§5 · 行列式的性质、按行（列）展开；第 2 章 §3 · 逆矩阵</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>课后一周任务</dt>
+<dd class="meta">待布置</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="week-start">
+<td>5 / 10</td>
+<td>11 月 10 日 · 二<br>
+<span class="meta">第 9 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">什么时候可以用行列式解方程组？</h3>
+<p class="lesson-points">克拉默法则、可逆条件总结；行列式习题。</p>
+<p class="textbook">教材：第 2 章 §4 · 克拉默法则；第 1 章综合</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>资料与互动</dt>
+<dd>
+<div class="resource-links">
+<a href="../resources/flipped-qa/">翻转答疑 · 实践说明</a>
+</div>
+</dd>
+<dt>课后一周任务</dt>
+<dd>翻转答疑 · 实践 1（第 1 章）<span class="task-status">计划</span>
+<br>11 月 10 日课后—11 月 17 日 12:00；在学习通帮助 AI 同学完成两道题并验算。</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="">
+<td>5 / 10</td>
+<td>11 月 11 日 · 三<br>
+<span class="meta">第 10 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">哪些向量可以由其他向量配出来？</h3>
+<p class="lesson-points">向量组的线性组合、线性相关与无关。</p>
+<p class="textbook">教材：第 4 章 §1—§2 · 向量组及其线性组合、线性相关性</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>资料与互动</dt>
+<dd>
+<div class="resource-links">
+<a href="../demos/linvis/">LinVis · 向量与空间</a>
+</div>
+</dd>
+<dt>课后一周任务</dt>
+<dd class="meta">待布置</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="week-start">
+<td>6 / 11</td>
+<td>11 月 17 日 · 二<br>
+<span class="meta">第 11 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">张成一个空间，最少需要几个向量？</h3>
+<p class="lesson-points">向量组的秩与极大无关组。</p>
+<p class="textbook">教材：第 4 章 §3 · 向量组的秩</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>资料与互动</dt>
+<dd>
+<div class="resource-links">
+<a href="../demos/linvis/">LinVis · 向量与空间</a>
+</div>
+</dd>
+<dt>课后一周任务</dt>
+<dd class="meta">待布置</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="">
+<td>6 / 11</td>
+<td>11 月 18 日 · 三<br>
+<span class="meta">第 12 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">方程组的所有解组成什么样的集合？</h3>
+<p class="lesson-points">方程组解的结构；第 1—3 章复习。</p>
+<p class="textbook">教材：第 4 章 · 线性方程组的解的结构；第 1—3 章复习</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>资料与互动</dt>
+<dd>
+<div class="resource-links">
+<a href="../resources/flipped-qa/">翻转答疑 · 实践说明</a>
+</div>
+</dd>
+<dt>课后一周任务</dt>
+<dd>翻转答疑 · 实践 4（第 4 章）<span class="task-status">计划</span>
+<br>11 月 18 日课后—段考前；在学习通帮助 AI 同学完成两道题并验算。</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="week-start">
+<td>7 / 12</td>
+<td>11 月 24 日 · 二<br>
+<span class="meta">第 13 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">我们能把矩阵、方程组与行列式连起来吗？</h3>
+<p class="lesson-points">段考与讲评（暂定，范围为第 1—3 章）。</p>
+<p class="textbook">教材：第 1—3 章</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>课后一周任务</dt>
+<dd class="meta">待布置</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="">
+<td>7 / 12</td>
+<td>11 月 25 日 · 三<br>
+<span class="meta">第 14 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">怎样把一组方向变成彼此垂直？</h3>
+<p class="lesson-points">段考讲评；内积、正交向量组与施密特正交化。</p>
+<p class="textbook">教材：第 5 章 §1 · 向量的内积、长度及正交性</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>资料与互动</dt>
+<dd>
+<div class="resource-links">
+<a href="../demos/linvis/">LinVis · 向量与空间</a>
+</div>
+</dd>
+<dt>课后一周任务</dt>
+<dd class="meta">待布置</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="week-start">
+<td>8 / 13</td>
+<td>12 月 1 日 · 二<br>
+<span class="meta">第 15 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">哪些向量经过变换仍与原向量共线？</h3>
+<p class="lesson-points">特征值、特征向量、相似与对角化。</p>
+<p class="textbook">教材：第 5 章 §2—§3 · 特征值与特征向量、相似矩阵</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>资料与互动</dt>
+<dd>
+<div class="resource-links">
+<a href="../demos/linvis/">LinVis · 向量与空间</a>
+</div>
+</dd>
+<dt>课后一周任务</dt>
+<dd class="meta">待布置</dd>
+</dl>
+</details>
+</td>
+</tr>
+<tr class="">
+<td>8 / 13</td>
+<td>12 月 2 日 · 三<br>
+<span class="meta">第 16 讲</span>
+</td>
+<td>
+<h3 class="lesson-title">怎样用新的坐标看清一个二次型？</h3>
+<p class="lesson-points">对称矩阵对角化、二次型与正定性。</p>
+<p class="textbook">教材：第 5 章 §4—§7 · 对称矩阵的对角化、二次型及其标准形、正定二次型</p>
+<details class="lesson-details">
+<summary>资料与课后任务</summary>
+<dl>
+<dt>资料与互动</dt>
+<dd>
+<div class="resource-links">
+<a href="../resources/flipped-qa/">翻转答疑 · 实践说明</a>
+</div>
+</dd>
+<dt>课后一周任务</dt>
+<dd>翻转答疑 · 实践 5（第 5 章）<span class="task-status">计划</span>
+<br>12 月 2 日课后—期考前；在学习通帮助 AI 同学完成两道题并验算。</dd>
+</dl>
+</details>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="section">
+<h2>教学资源</h2>
+<div class="grid">
+<article class="card">
+<p class="eyebrow">Cofficients</p>
+<h3>咖啡师的线性代数</h3>
+<p>浓缩咖啡、牛奶与水构成原料空间。拖动系数或坐标点，观察线性组合、满杯线与满杯面。</p>
+<a class="button" href="/teaching/linear-algebra/demos/cofficients/">进入 Cofficients</a>
+</article>
+<article class="card">
+<p class="eyebrow">LinVis</p>
+<h3>看见向量与空间</h3>
+<p>通过交互向量探索线性组合、张成、线性相关与秩，连接几何图像和代数表达。</p>
+<a class="button" href="/teaching/linear-algebra/demos/linvis/">进入 LinVis</a>
+</article>
+</div>
+<div class="grid resource-extra">
+<article class="card">
+<p class="resource-kind">教材</p>
+<h3>工程数学 · 线性代数</h3>
+<p>同济大学数学科学学院编，第 7 版，高等教育出版社。</p>
+<a href="/teaching/linear-algebra/#outline">查看知识大纲与章节对应</a>
+</article>
+<article class="card">
+<p class="resource-kind">AI 实践</p>
+<h3>翻转答疑</h3>
+<p>当一次答疑助教，把题目讲清楚，再一起验算。</p>
+<a href="/teaching/linear-algebra/resources/flipped-qa/">查看实践说明</a>
+</article>
+</div>
+</section>
+</main>
+<footer>© 2026 Quan Guo</footer>
+</body>
+</html>
