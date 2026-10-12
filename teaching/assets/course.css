@@ -2,4 +2,5 @@
 .course-title-en{text-transform:none;letter-spacing:.04em}.th-note{display:block;font-size:12px;font-weight:400;color:#69726b;white-space:nowrap}.lesson-title{font-size:18px;font-weight:600;margin:0 0 8px}.lesson-points{margin:0 0 9px;color:#46544d}.textbook{font-size:13px;color:#69726b;margin:0}.lesson-details{padding:10px 0 0}.lesson-details summary{font-size:13px;font-weight:400;color:#375e51}.lesson-details dl{margin:12px 0 0}.lesson-details dt{font-size:13px;font-weight:600;margin-top:10px}.lesson-details dd{margin:3px 0 0}.task-status{font-size:12px;color:#80633c;margin-left:6px}.resource-kind{font-size:13px;color:#69726b}.task-list{padding-left:22px}.task-list li{margin:10px 0}table td:first-child{width:105px}table td:nth-child(2){width:125px}
 .resource-extra{margin-top:22px} .lesson-details[open] summary{margin-bottom:8px}
 
-.chapter-tasks th[scope="row"]{background:transparent;font-weight:400;min-width:200px}.chapter-tasks td{white-space:normal;width:auto;min-width:120px}
+
+.lesson-tasks{margin-top:14px;padding-top:10px;border-top:1px solid #e1e2da;font-size:13px;color:#59645d}.lesson-tasks p{margin-bottom:6px}.lesson-tasks strong{font-weight:600}
