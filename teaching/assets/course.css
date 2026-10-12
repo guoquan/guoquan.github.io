@@ -4,3 +4,12 @@
 
 
 .lesson-tasks{margin-top:14px;padding-top:10px;border-top:1px solid #e1e2da;font-size:13px;color:#59645d}.lesson-tasks p{margin-bottom:6px}.lesson-tasks strong{font-weight:600}
+
+.practice-shot { margin: 1.8rem 0; max-width: 52rem; }
+.shot-frame { position: relative; }
+.shot-frame img { display: block; width: 100%; height: auto; border: 1px solid var(--line, #d8ddd9); border-radius: .5rem; }
+.shot-highlight { position: absolute; border: 3px solid #ae6628; border-radius: .5rem; pointer-events: none; box-shadow: 0 0 0 2px #fff9; }
+.entry-highlight { left: 54.5%; top: 71.4%; width: 20.4%; height: 25%; }
+.start-highlight { left: 40.5%; top: 72.3%; width: 19%; height: 6.9%; }
+.chat-highlight { left: 12.8%; top: 78.8%; width: 81%; height: 17.8%; }
+.practice-shot figcaption { margin-top: .7rem; line-height: 1.7; }
