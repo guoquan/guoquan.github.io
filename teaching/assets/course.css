@@ -14,4 +14,4 @@
 .chat-highlight { left: 12.8%; top: 78.8%; width: 81%; height: 17.8%; }
 .practice-shot figcaption { margin-top: .7rem; line-height: 1.7; }
 
-.task-policy{font-size:15px}.task-deadline{padding:8px 0 0;border-top:1px solid #e1e2da;color:#59645d}.task-deadline .deadline-title{font-size:14px;font-weight:600;color:#70543b}.task-deadline time{font-size:inherit}.deadline-badge{display:inline-block;margin-top:8px;padding:2px 8px;border-radius:3px;background:#8a4b21;color:#fff;font-size:12px;font-weight:600}
+.task-policy{font-size:15px}.task-deadline{max-width:520px;padding:9px 13px;border:1px solid #e3d3be;border-left:3px solid #ac7948;border-radius:4px;background:#f7efe3;color:#665441}.task-deadline p{margin:0}.task-deadline p+p{margin-top:3px}.task-deadline .deadline-title{font-size:14px;font-weight:600;color:#70543b}.task-deadline time{font-size:inherit}.deadline-badge{display:inline-block;margin-top:8px;padding:2px 8px;border-radius:3px;background:#8a4b21;color:#fff;font-size:12px;font-weight:600}
