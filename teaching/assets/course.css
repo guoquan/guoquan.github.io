@@ -15,3 +15,5 @@
 .practice-shot figcaption { margin-top: .7rem; line-height: 1.7; }
 
 .task-policy{font-size:15px}.task-deadline{max-width:520px;padding:9px 13px;border:1px solid #e3d3be;border-left:3px solid #ac7948;border-radius:4px;background:#f7efe3;color:#665441}.task-deadline p{margin:0}.task-deadline p+p{margin-top:3px}.task-deadline .deadline-title{font-size:14px;font-weight:600;color:#70543b}.task-deadline time{font-size:inherit}.deadline-badge{display:inline-block;margin-top:8px;padding:2px 8px;border-radius:3px;background:#8a4b21;color:#fff;font-size:12px;font-weight:600}
+
+#lecture-03,#schedule-change-1021{scroll-margin-top:24px}
