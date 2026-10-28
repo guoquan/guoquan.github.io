@@ -28,13 +28,20 @@
 <h1>线性代数 · 2026F</h1>
 <p class="meta">2026 年秋季 · 计算机科学与技术专业 · 03 / 04 班<br>周二、周三 · 第 10—12 节 · 共 16 次课，每次 3 学时</p>
 <nav aria-label="页内导航">
-<a href="#schedule">教学安排</a>
+<a href="#schedule">教学安排与板块</a>
 <a href="../#outline">课程知识大纲</a>
 <a href="#resources">教学资源</a>
 </nav>
 </section>
 <section class="section" id="schedule">
 <h2>教学安排</h2>
+<nav class="teaching-block-nav" aria-label="教学板块">
+<a href="#block-01"><span class="block-number">01</span><span><strong>矩阵</strong><span class="block-nav-thought">线性问题的统一语言</span></span></a>
+<a href="#block-02"><span class="block-number">02</span><span><strong>逆矩阵</strong><span class="block-nav-thought">恢复与不可恢复</span></span></a>
+<a href="#block-03"><span class="block-number">03</span><span><strong>行列式</strong><span class="block-nav-thought">一个数连接代数与几何</span></span></a>
+<a href="#block-04"><span class="block-number">04</span><span><strong>向量组</strong><span class="block-nav-thought">空间的同与不同</span></span></a>
+<a href="#block-05"><span class="block-number">05</span><span><strong>特征值与特征向量</strong><span class="block-nav-thought">空间不空</span></span></a>
+</nav>
 <p class="callout task-policy"><strong>作业与翻转答疑按教学单元对应。</strong>每次作业截止时，对应单元须已有翻转答疑成绩。翻转答疑不设截止，可持续练习、提高成绩。</p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="教学安排表，可横向滚动">
 <table class="course-schedule">
@@ -46,13 +53,18 @@
 </tr>
 </thead>
 <tbody>
-<tr class="week-start">
+<tr id="lecture-01" class="week-start">
 <th class="schedule-week" scope="rowgroup" rowspan="2">教学第 1 周<span class="calendar-week">校历第 6 周</span></th>
 <td class="schedule-date">10 月 13 日 · 周二<br>
 <span class="meta">第 1 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">什么是线性代数？</h3>
+<div class="teaching-block-start" id="block-01">
+<p class="block-label">第一板块</p>
+<h3>矩阵：线性问题的统一语言</h3>
+<p class="block-intro">方程、线性组合与空间变换，共用矩阵的表达与运算。</p>
+</div>
+<h4 class="lesson-title">什么是线性代数？</h4>
 <p class="lesson-points">线性组合、张成与维数的直觉；线性方程组及矩阵形式。</p>
 <p class="textbook">教材：第 2 章 §1 · 线性方程组和矩阵（导入）</p>
 <div class="lesson-details">
@@ -69,16 +81,16 @@
 </dl>
 </div>
 <div class="lesson-tasks">
-<p><strong>开始：第 1 次翻转答疑 · 矩阵运算与初等变换</strong>　<a href="../resources/flipped-qa/">实践说明</a></p>
+<p><strong>开始：第 1 次翻转答疑 · 矩阵：线性问题的统一语言</strong>　<a href="../resources/flipped-qa/">实践说明</a></p>
 </div>
 </td>
 </tr>
-<tr class="">
+<tr id="lecture-02" class="">
 <td class="schedule-date">10 月 14 日 · 周三<br>
 <span class="meta">第 2 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">矩阵怎样记录和组合线性关系？</h3>
+<h4 class="lesson-title">矩阵怎样记录和组合线性关系？</h4>
 <p class="lesson-points">线性方程组与矩阵基础；特殊矩阵与邻接矩阵；伸缩、投影、旋转与变换复合；矩阵加法、数乘、乘法与幂。</p>
 <p class="textbook">教材：第 2 章 §1 · 一、线性方程组，二、矩阵的定义；§2 · 一、矩阵的加法，二、数与矩阵相乘，三、矩阵与矩阵相乘</p>
 <div class="lesson-details">
@@ -106,7 +118,7 @@
 <span class="meta">第 3 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">把矩阵转置或分块，会改变什么？</h3>
+<h4 class="lesson-title">把矩阵转置或分块，会改变什么？</h4>
 <p class="lesson-points">矩阵乘法的多种理解；转置、对称阵、分块矩阵；矩阵运算习题。</p>
 <p class="textbook">教材：第 2 章 §2、§5 · 矩阵的运算、矩阵分块法</p>
 <div class="lesson-details">
@@ -139,7 +151,7 @@
 <span class="meta">第 4 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">怎样把方程组化成更容易解的形式？</h3>
+<h4 class="lesson-title">怎样把方程组化成更容易解的形式？</h4>
 <p class="lesson-points">分块矩阵例题与性质；初等变换、行阶梯形、行最简形与标准形；初等矩阵及连续行变换的乘法表示。</p>
 <p class="textbook">教材：第 2 章 §5 · 矩阵分块法；第 3 章 §1 · 矩阵的初等变换</p>
 <div class="lesson-details">
@@ -161,7 +173,7 @@
 <span class="meta">第 4 讲补充</span>
 </td>
 <td>
-<h3 class="lesson-title">同步变换与过程记录</h3>
+<h4 class="lesson-title">同步变换与过程记录</h4>
 <p class="lesson-points">多个右端项的同步求解；行变换的过程记录；第一板块小结。</p>
 <p class="textbook">教材：第 3 章 §1 · 矩阵的初等变换，pp.63–64</p>
 <div class="lesson-details">
@@ -181,7 +193,12 @@
 <span class="meta">第 5 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">一个线性变换什么时候可以倒过来？</h3>
+<div class="teaching-block-start" id="block-02">
+<p class="block-label">第二板块</p>
+<h3>逆矩阵：恢复与不可恢复</h3>
+<p class="block-intro">从结果寻找输入，研究恢复的方法、条件，以及无法唯一恢复的原因。</p>
+</div>
+<h4 class="lesson-title">一个线性变换什么时候可以倒过来？</h4>
 <p class="lesson-points">逆矩阵的定义、唯一性与运算规律；初等矩阵的逆、可逆矩阵的初等分解；同阶方阵的单边验证。</p>
 <p class="meta">下次继续：逆矩阵的计算。</p>
 <p class="textbook">教材：第 2 章 §3 · 逆矩阵；第 3 章 §1 · 矩阵的初等变换</p>
@@ -197,19 +214,19 @@
 </dl>
 </div>
 <div class="lesson-tasks">
-<p><strong>开始：第 2 次翻转答疑 · 逆矩阵、秩与行列式</strong>　<a href="../resources/flipped-qa/">实践说明</a></p>
+<p><strong>开始：第 2 次翻转答疑 · 逆矩阵：恢复与不可恢复</strong>　<a href="../resources/flipped-qa/">实践说明</a></p>
 </div>
 </td>
 </tr>
 </tbody>
 <tbody>
-<tr class="week-start">
+<tr id="lecture-06" class="week-start">
 <th class="schedule-week" scope="rowgroup" rowspan="2">教学第 4 周<span class="calendar-week">校历第 9 周</span></th>
 <td class="schedule-date">11 月 3 日 · 周二<br>
 <span class="meta">第 6 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">方程组有没有解，又有多少个解？</h3>
+<h4 class="lesson-title">方程组有没有解，又有多少个解？</h4>
 <p class="lesson-points">矩阵的秩、有解判定与通解；综合习题。</p>
 <p class="textbook">教材：第 3 章 §2—§3 · 矩阵的秩、线性方程组的解</p>
 <div class="lesson-details">
@@ -224,12 +241,12 @@
 </div>
 </td>
 </tr>
-<tr class="">
+<tr id="lecture-07" class="">
 <td class="schedule-date">11 月 4 日 · 周三<br>
 <span class="meta">第 7 讲</span><br><span class="deadline-badge">作业 DDL</span>
 </td>
 <td>
-<h3 class="lesson-title">行列式怎样测量面积与体积？</h3>
+<h4 class="lesson-title">行列式怎样测量面积与体积？</h4>
 <p class="lesson-points">二阶、三阶行列式的几何意义与 n 阶定义。</p>
 <p class="textbook">教材：第 1 章 §1、§3 · 二阶与三阶行列式、n 阶行列式的定义</p>
 <div class="lesson-tasks task-deadline">
@@ -240,39 +257,49 @@
 </tr>
 </tbody>
 <tbody>
-<tr class="week-start">
+<tr id="lecture-08" class="week-start">
 <th class="schedule-week" scope="rowgroup" rowspan="2">教学第 5 周<span class="calendar-week">校历第 10 周</span></th>
 <td class="schedule-date">11 月 10 日 · 周二<br>
 <span class="meta">第 8 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">行列式怎样算，又怎样帮助求逆？</h3>
+<div class="teaching-block-start" id="block-03">
+<p class="block-label">第三板块</p>
+<h3>行列式：一个数连接代数与几何</h3>
+<p class="block-intro">从面积、体积与定向理解行列式，再建立性质、计算与应用。</p>
+</div>
+<h4 class="lesson-title">行列式怎样算，又怎样帮助求逆？</h4>
 <p class="lesson-points">行列式性质、按行展开与伴随矩阵求逆。</p>
 <p class="textbook">教材：第 1 章 §4—§5 · 行列式的性质、按行（列）展开；第 2 章 §3 · 逆矩阵</p>
 </td>
 </tr>
-<tr class="">
+<tr id="lecture-09" class="">
 <td class="schedule-date">11 月 11 日 · 周三<br>
 <span class="meta">第 9 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">什么时候可以用行列式解方程组？</h3>
+<h4 class="lesson-title">什么时候可以用行列式解方程组？</h4>
 <p class="lesson-points">克拉默法则、可逆条件总结；行列式习题。</p>
 <p class="textbook">教材：第 2 章 §4 · 克拉默法则；第 1 章综合</p>
 <div class="lesson-tasks">
-<p><strong>开始：第 3 次翻转答疑 · 克拉默法则与前三章综合</strong>　<a href="../resources/flipped-qa/">实践说明</a></p>
+<p><strong>开始：第 3 次翻转答疑 · 行列式：一个数连接代数与几何</strong>　<a href="../resources/flipped-qa/">实践说明</a></p>
 </div>
 </td>
 </tr>
 </tbody>
 <tbody>
-<tr class="week-start">
+<tr id="lecture-10" class="week-start">
 <th class="schedule-week" scope="rowgroup" rowspan="2">教学第 6 周<span class="calendar-week">校历第 11 周</span></th>
 <td class="schedule-date">11 月 17 日 · 周二<br>
 <span class="meta">第 10 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">哪些向量可以由其他向量配出来？</h3>
+<div class="teaching-block-start" id="block-04">
+<p class="block-label">第四板块</p>
+<h3>向量组：空间的同与不同</h3>
+<p class="block-intro">辨认不同向量组描述的空间，理解独立方向、基、维数与坐标。</p>
+</div>
+<h4 class="lesson-title">哪些向量可以由其他向量配出来？</h4>
 <p class="lesson-points">向量组的线性组合、线性相关与无关。</p>
 <p class="textbook">教材：第 4 章 §1—§2 · 向量组及其线性组合、线性相关性</p>
 <div class="lesson-details">
@@ -286,16 +313,16 @@
 </dl>
 </div>
 <div class="lesson-tasks">
-<p><strong>开始：第 4 次翻转答疑 · 向量组与解的结构</strong>　<a href="../resources/flipped-qa/">实践说明</a></p>
+<p><strong>开始：第 4 次翻转答疑 · 向量组：空间的同与不同</strong>　<a href="../resources/flipped-qa/">实践说明</a></p>
 </div>
 </td>
 </tr>
-<tr class="">
+<tr id="lecture-11" class="">
 <td class="schedule-date">11 月 18 日 · 周三<br>
 <span class="meta">第 11 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">张成一个空间，最少需要几个向量？</h3>
+<h4 class="lesson-title">张成一个空间，最少需要几个向量？</h4>
 <p class="lesson-points">向量组的秩与极大无关组。</p>
 <p class="textbook">教材：第 4 章 §3 · 向量组的秩</p>
 <div class="lesson-details">
@@ -312,13 +339,13 @@
 </tr>
 </tbody>
 <tbody>
-<tr class="week-start">
+<tr id="lecture-12" class="week-start">
 <th class="schedule-week" scope="rowgroup" rowspan="2">教学第 7 周<span class="calendar-week">校历第 12 周</span></th>
 <td class="schedule-date">11 月 24 日 · 周二<br>
 <span class="meta">第 12 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">方程组的所有解组成什么样的集合？</h3>
+<h4 class="lesson-title">方程组的所有解组成什么样的集合？</h4>
 <p class="lesson-points">方程组解的结构；第 1—3 章复习。</p>
 <p class="textbook">教材：第 4 章 · 线性方程组的解的结构；第 1—3 章复习</p>
 <div class="lesson-details">
@@ -333,25 +360,30 @@
 </div>
 </td>
 </tr>
-<tr class="">
+<tr id="lecture-13" class="">
 <td class="schedule-date">11 月 25 日 · 周三<br>
 <span class="meta">第 13 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">我们能把矩阵、方程组与行列式连起来吗？</h3>
+<h4 class="lesson-title">我们能把矩阵、方程组与行列式连起来吗？</h4>
 <p class="lesson-points">段考与讲评（暂定，范围为第 1—3 章）。</p>
 <p class="textbook">教材：第 1—3 章</p>
 </td>
 </tr>
 </tbody>
 <tbody>
-<tr class="week-start">
+<tr id="lecture-14" class="week-start">
 <th class="schedule-week" scope="rowgroup" rowspan="2">教学第 8 周<span class="calendar-week">校历第 13 周</span></th>
 <td class="schedule-date">12 月 1 日 · 周二<br>
 <span class="meta">第 14 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">怎样把一组方向变成彼此垂直？</h3>
+<div class="teaching-block-start" id="block-05">
+<p class="block-label">第五板块</p>
+<h3>特征值与特征向量：空间不空</h3>
+<p class="block-intro">从特征方向与坐标选择出发，认识线性问题中的结构。</p>
+</div>
+<h4 class="lesson-title">怎样把一组方向变成彼此垂直？</h4>
 <p class="lesson-points">段考讲评；内积、正交向量组与施密特正交化。</p>
 <p class="textbook">教材：第 5 章 §1 · 向量的内积、长度及正交性</p>
 <div class="lesson-details">
@@ -365,16 +397,16 @@
 </dl>
 </div>
 <div class="lesson-tasks">
-<p><strong>开始：第 5 次翻转答疑 · 正交、特征值与二次型</strong>　<a href="../resources/flipped-qa/">实践说明</a></p>
+<p><strong>开始：第 5 次翻转答疑 · 特征值与特征向量：空间不空</strong>　<a href="../resources/flipped-qa/">实践说明</a></p>
 </div>
 </td>
 </tr>
-<tr class="">
+<tr id="lecture-15" class="">
 <td class="schedule-date">12 月 2 日 · 周三<br>
 <span class="meta">第 15 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">哪些向量经过变换仍与原向量共线？</h3>
+<h4 class="lesson-title">哪些向量经过变换仍与原向量共线？</h4>
 <p class="lesson-points">特征值、特征向量、相似与对角化。</p>
 <p class="textbook">教材：第 5 章 §2—§3 · 特征值与特征向量、相似矩阵</p>
 <div class="lesson-details">
@@ -391,13 +423,13 @@
 </tr>
 </tbody>
 <tbody>
-<tr class="week-start">
+<tr id="lecture-16" class="week-start">
 <th class="schedule-week" scope="rowgroup" rowspan="1">教学第 9 周<span class="calendar-week">校历第 14 周</span></th>
 <td class="schedule-date">12 月 8 日 · 周二<br>
 <span class="meta">第 16 讲</span>
 </td>
 <td>
-<h3 class="lesson-title">怎样用新的坐标看清一个二次型？</h3>
+<h4 class="lesson-title">怎样用新的坐标看清一个二次型？</h4>
 <p class="lesson-points">对称矩阵对角化、二次型与正定性。</p>
 <p class="textbook">教材：第 5 章 §4—§7 · 对称矩阵的对角化、二次型及其标准形、正定二次型</p>
 <div class="lesson-details">
