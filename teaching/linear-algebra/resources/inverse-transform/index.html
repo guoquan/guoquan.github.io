@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>逆矩阵：变换与恢复</title>
+<style>
+:root{color-scheme:light;--ink:#253b36;--paper:#f6f4ed;--green:#276d60;--orange:#b65a32;--line:#d4d8cf}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}main{max-width:1400px;margin:auto;padding:28px}h1{font-size:38px;margin:0 0 8px}p{line-height:1.65}.intro{font-size:21px;margin:0 0 20px;color:#65716b}.layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(330px,1fr);gap:28px;align-items:start}svg{display:block;width:100%;background:#fffef9;border:1px solid var(--line);border-radius:12px}aside{padding:8px 0}h2{font-size:26px;margin:0 0 16px}.math{font-family:'Cambria Math','STIX Two Math','Times New Roman',serif;font-size:29px}.matrix{display:inline-grid;grid-template-columns:repeat(2,1.15em);gap:.1em .2em;vertical-align:middle;border-left:2px solid;border-right:2px solid;border-radius:5px;padding:.06em .2em;margin:0 .2em;text-align:center}.formula{font-size:25px;line-height:2.6;white-space:nowrap;margin:8px 0}button{font:inherit;font-size:20px;border:1px solid var(--line);padding:12px 16px;border-radius:8px;background:#fffef9;cursor:pointer;color:var(--ink)}button:disabled{opacity:.4;cursor:default}button:focus-visible{outline:3px solid #a2c7bb;outline-offset:3px}.modes{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}.modes button[aria-pressed=true]{background:#e2eee7;border-color:var(--green)}.controls{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.primary{background:var(--green);color:white;border-color:var(--green)}#explanation{font-size:23px;line-height:1.7;min-height:150px;padding:18px;background:#e9eee5;border-left:4px solid var(--green)}.legend{display:flex;gap:22px;flex-wrap:wrap;font-size:18px;margin-top:12px}.legend span:before{content:'';display:inline-block;width:22px;height:4px;background:#a3aba6;vertical-align:middle;margin-right:8px}.legend span:nth-child(2):before{background:var(--green)}.legend span:nth-child(3):before{background:var(--orange)}.fine{font-size:16px;color:#6b756e;margin:18px 0 0}.result{font-size:25px;min-height:70px;line-height:1.7}.tag{font-size:21px;color:#276d60;margin-bottom:12px} @media(max-width:850px){main{padding:18px}.layout{grid-template-columns:1fr}h1{font-size:30px}#explanation{min-height:0}}
+</style></head><body><main>
+<h1>逆矩阵：变换与恢复</h1><p class="intro">先观察同一个图形的变化，再检查能否恢复每一个输入。</p>
+<div class="modes"><button id="invertible" aria-pressed="true">可恢复的变换</button><button id="singular" aria-pressed="false">压扁后的信息丢失</button></div>
+<div class="layout"><section><svg id="scene" viewBox="0 0 760 680" role="img" aria-label="坐标系中原图与变换后图形的比较"><g id="fixedGrid"></g><g id="movingGrid"></g><g id="geometry"></g><g id="labels"></g></svg><div class="legend"><span>原图轮廓</span><span>当前图形</span><span>待追踪点</span></div></section>
+<aside><div id="stage" class="tag">第 0 步 · 原图</div><h2 id="modeTitle">同一个矩阵，恢复所有输入</h2>
+<div class="formula math" id="matrixA"></div><div class="formula math" id="matrixC"></div>
+<div id="result" class="result math"></div>
+<div class="controls"><button id="apply" class="primary">① 施加 A</button><button id="undo" disabled>② 施加 C，恢复</button><button id="reset">重置演示</button></div>
+<div id="explanation" role="status" aria-live="polite"></div>
+<p class="fine">灰色轮廓保留作比较。动画只插值展示图形移动，不把中间帧当作新的矩阵运算。重置演示是重新载入原图，不代表找到了压扁变换的逆。</p>
+</aside></div></main>
+<script>
+'use strict';
+const A=[[1,1],[1,2]],C=[[2,-1],[-1,1]],S=[[1,0],[0,0]],I=[[1,0],[0,1]];
+const house=[[0,0],[2,0],[2,1],[1,2],[0,1]];
+const tracked=[[2,1],[2,3]];
+const $=id=>document.getElementById(id),ns='http://www.w3.org/2000/svg';
+let singular=false,step=0,busy=false,current=I.map(r=>r.slice()),token=0;
+const mv=(m,v)=>m.map(r=>r[0]*v[0]+r[1]*v[1]);
+const mm=(a,b)=>a.map(r=>b[0].map((_,j)=>r[0]*b[0][j]+r[1]*b[1][j]));
+const pos=v=>[275+v[0]*67,465-v[1]*67];
+function node(tag,attrs,parent){const e=document.createElementNS(ns,tag);for(const[k,v]of Object.entries(attrs))e.setAttribute(k,v);parent.appendChild(e);return e;}
+function line(a,b,attrs,parent){const p=pos(a),q=pos(b);return node('line',{x1:p[0],y1:p[1],x2:q[0],y2:q[1],...attrs},parent);}
+function label(v,text,attrs={}){const p=pos(v);const t=node('text',{x:p[0]+9,y:p[1]-10,fill:'#253b36','font-size':19,'font-family':'Cambria Math, Times New Roman, serif',...attrs},$('labels'));t.textContent=text;return t;}
+function polygon(points,attrs,parent){return node('polygon',{points:points.map(v=>pos(v).join(',')).join(' '),...attrs},parent);}
+function draw(m){
+ for(const id of ['fixedGrid','movingGrid','geometry','labels'])$(id).replaceChildren();
+ const fixed=$('fixedGrid'),moving=$('movingGrid'),geo=$('geometry');
+ for(let k=-5;k<=7;k++){
+  line([k,-5],[k,7],{stroke:'#e5e7df','stroke-width':1},fixed);
+  line([-5,k],[7,k],{stroke:'#e5e7df','stroke-width':1},fixed);
+  line(mv(m,[k,-5]),mv(m,[k,7]),{stroke:'#9dbcae','stroke-width':1,opacity:.38},moving);
+  line(mv(m,[-5,k]),mv(m,[7,k]),{stroke:'#9dbcae','stroke-width':1,opacity:.38},moving);
+ }
+ line([-4,0],[7,0],{stroke:'#77857b','stroke-width':1.5},fixed);
+ line([0,-3],[0,6.5],{stroke:'#77857b','stroke-width':1.5},fixed);
+ for(let k=-3;k<=6;k++)if(k!==0){label([k,0],String(k),{'font-size':16,y:490});label([0,k],String(k),{'font-size':16,x:253});}
+ label([6.7,0],'x',{'font-style':'italic'});label([0,6.2],'y',{'font-style':'italic'});label([0,0],'O',{'font-size':16});
+ polygon(house,{fill:'none',stroke:'#9ba7a0','stroke-width':2,'stroke-dasharray':'8 6'},geo);
+ polygon(house.map(v=>mv(m,v)),{fill:'#83b59b','fill-opacity':.22,stroke:'#276d60','stroke-width':3},geo);
+ const points=singular?tracked:tracked.slice(0,1);
+ points.forEach((v,j)=>{const out=mv(m,v),p=pos(out);node('circle',{cx:p[0],cy:p[1],r:7,fill:j?'#6b67a7':'#b65a32',stroke:'#fffef9','stroke-width':2},geo);if(singular&&step===1&&!busy){if(j===0)label(out,'P、Q 都到 (2, 0)',{'font-size':21});}else{label(out,`${j?'Q':'P'} (${out.map(n=>Math.round(n*100)/100).join(', ')})`,{'font-size':21,dy:j?-13:0});}});
+}
+function mat(m){return '<span class="matrix">'+m.flat().map(x=>'<span>'+x+'</span>').join('')+'</span>';}
+function refresh(){
+ $('invertible').setAttribute('aria-pressed',String(!singular));$('singular').setAttribute('aria-pressed',String(singular));
+ $('matrixA').innerHTML='<i>'+(singular?'S':'A')+'</i> = '+mat(singular?S:A);
+ $('matrixC').innerHTML=singular?'': '<i>C</i> = '+mat(C);
+ $('modeTitle').textContent=singular?'不同输入，可能得到同一个输出':'同一个矩阵，恢复所有输入';
+ $('apply').textContent='① 施加 '+(singular?'S':'A');$('apply').disabled=busy||step!==0;
+ $('undo').disabled=busy||singular||step!==1;
+ $('reset').disabled=busy;
+ $('stage').textContent=busy?'图形移动中':step===0?'第 0 步 · 原图':step===1?'第 1 步 · 变换后':'第 2 步 · 恢复原图';
+ if(singular){
+  $('result').innerHTML=step===0?'P = (2, 1)，Q = (2, 3)':'SP = SQ = (2, 0)';
+  $('explanation').textContent=step===0?'先看两个不同的点。压扁以后，能否仅凭输出判断原来的纵坐标？':'两个不同的输入重合在同一个输出。无法用同一个逆变换，同时把这个输出恢复成两个不同的原输入。';
+ }else{
+  $('result').innerHTML=step===0?'P = (2, 1)':step===1?'AP = (3, 4)':'CAP = P = (2, 1)';
+  $('explanation').textContent=step===0?'先预测：施加 A 后，点 P 会到哪里？图形还保留了哪些信息？':step===1?'对变换后的图形施加 C。观察整个图形能否恢复，再用矩阵乘法检查 CA 与 AC。':'图形回到原位。可验算 CA = AC = E，C 撤销 A 的作用。恢复的对象是每一个输入，而不只是这个点。';
+ }
+}
+function animate(target,next){
+ if(busy)return;busy=true;refresh();const start=current.map(r=>r.slice()),id=++token,begin=performance.now();
+ function frame(time){if(id!==token)return;let t=Math.min(1,(time-begin)/1100);const ease=t*t*(3-2*t);current=start.map((r,i)=>r.map((x,j)=>x+(target[i][j]-x)*ease));draw(current);if(t<1)requestAnimationFrame(frame);else{current=target.map(r=>r.slice());busy=false;step=next;refresh();draw(current);}}
+ requestAnimationFrame(frame);
+}
+$('apply').onclick=()=>animate(singular?S:A,1);
+$('undo').onclick=()=>animate(mm(C,A),2);
+function reset(){++token;busy=false;step=0;current=I.map(r=>r.slice());refresh();draw(current);}
+$('reset').onclick=reset;
+$('invertible').onclick=()=>{singular=false;reset();};$('singular').onclick=()=>{singular=true;reset();};
+// Exact integer checks for the fixed teaching matrices, without external libraries.
+if(JSON.stringify(mm(A,C))!==JSON.stringify(I)||JSON.stringify(mm(C,A))!==JSON.stringify(I))throw new Error('Teaching inverse verification failed');
+if(JSON.stringify(mv(S,tracked[0]))!==JSON.stringify(mv(S,tracked[1])))throw new Error('Collapse example verification failed');
+reset();
+</script></body></html>
