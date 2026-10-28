@@ -17,3 +17,16 @@
 .task-policy{font-size:15px}.task-deadline{max-width:520px;padding:9px 13px;border:1px solid #e3d3be;border-left:3px solid #ac7948;border-radius:4px;background:#f7efe3;color:#665441}.task-deadline p{margin:0}.task-deadline p+p{margin-top:3px}.task-deadline .deadline-title{font-size:14px;font-weight:600;color:#70543b}.task-deadline time{font-size:inherit}.deadline-badge{display:inline-block;margin-top:8px;padding:2px 8px;border-radius:3px;background:#8a4b21;color:#fff;font-size:12px;font-weight:600}
 
 #lecture-03,#schedule-change-1021{scroll-margin-top:24px}
+
+/* Teaching units: compact navigation and headings within the existing calendar. */
+.teaching-block-nav{display:flex;flex-wrap:wrap;gap:8px 24px;margin:0 0 22px}
+.teaching-block-nav a{display:flex;gap:9px;align-items:baseline;text-decoration:none;padding:5px 0}
+.teaching-block-nav strong{font-size:15px;font-weight:600}
+.block-number{font:italic 17px Georgia,serif;color:#967149}
+.block-nav-thought{display:block;font-size:12px;color:#69726b;line-height:1.5}
+.teaching-block-start{margin:2px 0 20px;padding:13px 0 16px;border-top:2px solid #6c816f;border-bottom:1px solid #dce0d6;scroll-margin-top:24px}
+.block-label{font-size:12px;color:#68746c;margin:0 0 5px;letter-spacing:.08em}
+.teaching-block-start h3{font-size:21px;line-height:1.5;margin:0 0 7px;font-weight:600}
+.block-intro{font-size:14px;color:#59645d;margin:0;line-height:1.7}
+.course-schedule [id^="lecture-"],.outline [id^="outline-block-"]{scroll-margin-top:24px}
+@media(max-width:640px){.teaching-block-nav{gap:10px 20px}.teaching-block-nav a{max-width:100%}.teaching-block-start h3{font-size:19px}}
