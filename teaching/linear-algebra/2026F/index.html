@@ -41,7 +41,11 @@
 .course-schedule tr[data-block]:has(.teaching-block-start)>td:last-child::before{top:30px}
 .course-schedule tr[data-block-end]>td:last-child::before{bottom:18px}
 @media(max-width:640px){.course-schedule tr[data-block]::before{background:var(--block-ink)}.course-schedule tr[data-block]:has(.teaching-block-start)::before{top:15px}.course-schedule tr[data-block-end]::before{bottom:18px}}
-@media print{.teaching-block-nav{position:static;box-shadow:none;overflow:visible;flex-wrap:wrap}}
+.block-current{position:fixed;z-index:19;display:flex;align-items:baseline;gap:10px;padding:9px 16px;border-left:5px solid var(--block-ink);border-radius:0 0 7px 7px;background:var(--block-paper);color:var(--block-ink);box-shadow:0 4px 12px rgba(41,52,48,.09);font-size:15px;font-weight:700;box-sizing:border-box;pointer-events:none}
+.block-current[hidden]{display:none}
+.block-current span{font-size:12px;white-space:nowrap}
+@media(max-width:640px){.block-current{padding:7px 12px;font-size:14px;gap:7px}}
+@media print{.block-current{display:none!important}.teaching-block-nav{position:static;box-shadow:none;overflow:visible;flex-wrap:wrap}}
 </style>
 </head>
 <body>
@@ -73,6 +77,7 @@
 <a href="#block-04"><span class="block-number">04</span><span><strong>向量组</strong><span class="block-nav-thought">空间的同与不同</span></span></a>
 <a href="#block-05"><span class="block-number">05</span><span><strong>特征值与特征向量</strong><span class="block-nav-thought">空间不空</span></span></a>
 </nav>
+<div class="block-current" hidden aria-hidden="true"><span></span><strong></strong></div>
 <p class="callout task-policy"><strong>作业与翻转答疑按教学单元对应。</strong>每次作业截止时，对应单元须已有翻转答疑成绩。翻转答疑不设截止，可持续练习、提高成绩。</p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="教学安排表，可横向滚动">
 <table class="course-schedule">
@@ -551,5 +556,51 @@
 </section>
 </main>
 <footer>© 2026 Quan Guo</footer>
+<script>
+(() => {
+  const nav = document.querySelector('.teaching-block-nav');
+  const bar = document.querySelector('.block-current');
+  const starts = Array.from(document.querySelectorAll('.teaching-block-start'));
+  const schedule = document.querySelector('.course-schedule');
+  let pending = false;
+  function update() {
+    pending = false;
+    const navBottom = nav.getBoundingClientRect().bottom;
+    const threshold = Math.max(0, navBottom);
+    const end = schedule.getBoundingClientRect().bottom;
+    let current = null;
+    for (const start of starts) {
+      if (start.getBoundingClientRect().bottom <= threshold) current = start;
+      else break;
+    }
+    if (!current || end <= threshold || nav.getBoundingClientRect().top > 0) {
+      bar.hidden = true;
+      return;
+    }
+    const next = starts[starts.indexOf(current) + 1];
+    if (next && next.getBoundingClientRect().top <= threshold + 42) {
+      bar.hidden = true;
+      return;
+    }
+    const rect = current.getBoundingClientRect();
+    const style = getComputedStyle(current.closest('tr'));
+    bar.style.setProperty('--block-ink', style.getPropertyValue('--block-ink'));
+    bar.style.setProperty('--block-paper', style.getPropertyValue('--block-paper'));
+    bar.style.top = `${threshold}px`;
+    bar.style.left = `${Math.max(0, rect.left)}px`;
+    bar.style.width = `${Math.min(rect.width, innerWidth - Math.max(0, rect.left))}px`;
+    bar.firstElementChild.textContent = current.querySelector('.block-label').textContent;
+    bar.lastElementChild.textContent = current.querySelector('h3').textContent;
+    bar.hidden = false;
+  }
+  function scheduleUpdate() {
+    if (!pending) { pending = true; requestAnimationFrame(update); }
+  }
+  addEventListener('scroll', scheduleUpdate, { passive: true });
+  addEventListener('resize', scheduleUpdate);
+  addEventListener('load', scheduleUpdate);
+  scheduleUpdate();
+})();
+</script>
 </body>
 </html>
