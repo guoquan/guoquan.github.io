@@ -11,6 +11,19 @@
 .course-schedule .schedule-date{white-space:nowrap;width:135px}
 .course-schedule .schedule-week{width:135px;white-space:nowrap;background:transparent;font-size:14px;font-weight:500;border-top:2px solid #b6c3b5}
 .course-schedule .calendar-week{display:block;color:#69726b;font-size:12px;font-weight:400;margin-top:3px}
+/* 板块目录随课程安排滚动，控制高度并保留横向滚动。 */
+.teaching-block-nav{position:sticky;top:0;z-index:20;display:flex;flex-wrap:nowrap;gap:4px;margin:0 0 22px;padding:9px;background:rgba(248,247,243,.97);border:1px solid #d8dfd4;border-radius:9px;box-shadow:0 4px 16px rgba(41,52,48,.08);overflow-x:auto;overscroll-behavior-inline:contain}
+.teaching-block-nav a{flex:1 0 auto;display:flex;align-items:flex-start;gap:7px;padding:7px 10px;border-radius:5px;white-space:nowrap}
+.teaching-block-nav a:hover,.teaching-block-nav a:focus-visible{background:#e8eee6}
+.teaching-block-nav .block-nav-thought{display:block;font-size:12px;line-height:1.35;color:#68746c;white-space:normal}
+.teaching-block-nav .block-number{font:15px/1.6 Georgia,serif;color:#98744e}
+.teaching-block-start{margin:0 0 23px;padding:18px 22px;background:#e8eee6;border:0;border-left:5px solid #6c816f;border-radius:0 7px 7px 0;scroll-margin-top:105px}
+.teaching-block-start .block-label{color:#617b67;font-size:12px;font-weight:700;letter-spacing:.12em;margin:0 0 5px}
+.teaching-block-start h3{font-size:22px;color:#294c3e;margin:0 0 6px}
+.teaching-block-start .block-intro{margin:0;color:#53665a;font-size:14px}
+@media(max-width:640px){.teaching-block-nav{margin-top:0;gap:2px;padding:6px;border-radius:6px}.teaching-block-nav a{flex:0 0 auto;padding:7px 9px}.teaching-block-nav .block-nav-thought{display:none}.teaching-block-start{padding:16px;margin-bottom:20px;scroll-margin-top:72px}.teaching-block-start h3{font-size:19px}}
+@media(max-width:640px){.course-schedule{min-width:0}.course-schedule thead{display:none}.course-schedule tbody,.course-schedule tr,.course-schedule th,.course-schedule td{display:block;width:auto!important}.course-schedule .schedule-week{padding:14px 10px 4px;border:0}.course-schedule .calendar-week{display:inline;margin-left:10px}.course-schedule .schedule-date{width:auto;white-space:normal;padding-bottom:2px;border-bottom:0}.course-schedule tbody td:last-child{padding-top:10px}.course-schedule tr.week-start td{border-top:0}.course-schedule tr{border-top:1px solid #dce0d6}.table-wrap{overflow-x:visible}.course-schedule .teaching-block-start{scroll-margin-top:76px}}
+@media print{.teaching-block-nav{position:static;box-shadow:none;overflow:visible;flex-wrap:wrap}}
 </style>
 </head>
 <body>
