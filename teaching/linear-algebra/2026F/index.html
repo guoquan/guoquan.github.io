@@ -23,6 +23,12 @@
 .teaching-block-start .block-intro{margin:0;color:#53665a;font-size:14px}
 @media(max-width:640px){.teaching-block-nav{margin-top:0;gap:2px;padding:6px;border-radius:6px}.teaching-block-nav a{flex:0 0 auto;padding:7px 9px}.teaching-block-nav .block-nav-thought{display:none}.teaching-block-start{padding:16px;margin-bottom:20px;scroll-margin-top:72px}.teaching-block-start h3{font-size:19px}}
 @media(max-width:640px){.course-schedule{min-width:0}.course-schedule thead{display:none}.course-schedule tbody,.course-schedule tr,.course-schedule th,.course-schedule td{display:block;width:auto!important}.course-schedule .schedule-week{padding:14px 10px 4px;border:0}.course-schedule .calendar-week{display:inline;margin-left:10px}.course-schedule .schedule-date{width:auto;white-space:normal;padding-bottom:2px;border-bottom:0}.course-schedule tbody td:last-child{padding-top:10px}.course-schedule tr.week-start td{border-top:0}.course-schedule tr{border-top:1px solid #dce0d6}.table-wrap{overflow-x:visible}.course-schedule .teaching-block-start{scroll-margin-top:76px}}
+/* 板块引导线贯穿各讲，正文与板块标题文字对齐。 */
+.course-schedule tbody tr>td:last-child{position:relative;padding-left:41px}
+.course-schedule tbody tr>td:last-child::before{content:"";position:absolute;left:14px;top:0;bottom:0;width:5px;background:#6c816f}
+.course-schedule tbody tr:has(#block-01)>td:last-child::before,.course-schedule tbody tr:has(#block-02)>td:last-child::before,.course-schedule tbody tr:has(#block-03)>td:last-child::before,.course-schedule tbody tr:has(#block-04)>td:last-child::before,.course-schedule tbody tr:has(#block-05)>td:last-child::before{top:15px}
+.course-schedule .teaching-block-start{margin-left:-22px;padding-left:22px;border-left:0}
+@media(max-width:640px){.course-schedule tbody tr{position:relative}.course-schedule tbody tr::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:5px;background:#6c816f}.course-schedule tbody tr:has(.teaching-block-start)::before{top:0}.course-schedule tbody tr>td:last-child::before{display:none}.course-schedule tbody tr>td:last-child{padding-left:31px}.course-schedule .schedule-date,.course-schedule .schedule-week{padding-left:31px}.course-schedule .teaching-block-start{margin-left:-16px;padding-left:16px}}
 @media print{.teaching-block-nav{position:static;box-shadow:none;overflow:visible;flex-wrap:wrap}}
 </style>
 </head>
