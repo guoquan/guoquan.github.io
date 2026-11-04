@@ -29,6 +29,18 @@
 .course-schedule tbody tr:has(#block-01)>td:last-child::before,.course-schedule tbody tr:has(#block-02)>td:last-child::before,.course-schedule tbody tr:has(#block-03)>td:last-child::before,.course-schedule tbody tr:has(#block-04)>td:last-child::before,.course-schedule tbody tr:has(#block-05)>td:last-child::before{top:15px}
 .course-schedule .teaching-block-start{margin-left:-22px;padding-left:22px;border-left:0}
 @media(max-width:640px){.course-schedule tbody tr{position:relative}.course-schedule tbody tr::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:5px;background:#6c816f}.course-schedule tbody tr:has(.teaching-block-start)::before{top:0}.course-schedule tbody tr>td:last-child::before{display:none}.course-schedule tbody tr>td:last-child{padding-left:31px}.course-schedule .schedule-date,.course-schedule .schedule-week{padding-left:31px}.course-schedule .teaching-block-start{margin-left:-16px;padding-left:16px}}
+/* 不同板块采用相近色调，并在交界处留出明确间隔。 */
+.course-schedule tr[data-block="1"]{--block-ink:#617d69;--block-paper:#e8eee6}
+.course-schedule tr[data-block="2"]{--block-ink:#547787;--block-paper:#e6eef1}
+.course-schedule tr[data-block="3"]{--block-ink:#a0784d;--block-paper:#f3ece1}
+.course-schedule tr[data-block="4"]{--block-ink:#82718f;--block-paper:#efebf2}
+.course-schedule tr[data-block="5"]{--block-ink:#a4675a;--block-paper:#f4ebe7}
+.course-schedule tr[data-block]>td:last-child::before{background:var(--block-ink)}
+.course-schedule tr[data-block] .teaching-block-start{background:var(--block-paper);margin-top:15px}
+.course-schedule tr[data-block] .teaching-block-start h3,.course-schedule tr[data-block] .block-label{color:var(--block-ink)}
+.course-schedule tr[data-block]:has(.teaching-block-start)>td:last-child::before{top:30px}
+.course-schedule tr[data-block-end]>td:last-child::before{bottom:18px}
+@media(max-width:640px){.course-schedule tr[data-block]::before{background:var(--block-ink)}.course-schedule tr[data-block]:has(.teaching-block-start)::before{top:15px}.course-schedule tr[data-block-end]::before{bottom:18px}}
 @media print{.teaching-block-nav{position:static;box-shadow:none;overflow:visible;flex-wrap:wrap}}
 </style>
 </head>
@@ -72,7 +84,7 @@
 </tr>
 </thead>
 <tbody>
-<tr id="lecture-01" class="week-start">
+<tr data-block="1" id="lecture-01" class="week-start">
 <th class="schedule-week" scope="rowgroup" rowspan="2">教学第 1 周<span class="calendar-week">校历第 6 周</span></th>
 <td class="schedule-date">10 月 13 日 · 周二<br>
 <span class="meta">第 1 讲</span>
@@ -104,7 +116,7 @@
 </div>
 </td>
 </tr>
-<tr id="lecture-02" class="">
+<tr data-block="1" id="lecture-02" class="">
 <td class="schedule-date">10 月 14 日 · 周三<br>
 <span class="meta">第 2 讲</span>
 </td>
@@ -131,7 +143,7 @@
 </tr>
 </tbody>
 <tbody>
-<tr class="week-start" id="lecture-03">
+<tr data-block="1" class="week-start" id="lecture-03">
 <th class="schedule-week" scope="rowgroup" rowspan="2">教学第 2 周<span class="calendar-week">校历第 7 周</span></th>
 <td class="schedule-date">10 月 20 日 · 周二<br>
 <span class="meta">第 3 讲</span>
@@ -158,13 +170,13 @@
 </div>
 </td>
 </tr>
-<tr class="" id="schedule-change-1021">
+<tr data-block="1" class="" id="schedule-change-1021">
 <td class="schedule-date">10 月 21 日 · 周三</td>
 <td><p class="lesson-points">停课；后续课程顺延一次。</p></td>
 </tr>
 </tbody>
 <tbody>
-<tr class="week-start" id="lecture-04">
+<tr data-block="1" class="week-start" id="lecture-04">
 <th class="schedule-week" scope="rowgroup" rowspan="3">教学第 3 周<span class="calendar-week">校历第 8 周</span></th>
 <td class="schedule-date">10 月 27 日 · 周二<br>
 <span class="meta">第 4 讲</span>
@@ -187,7 +199,7 @@
 </div>
 </td>
 </tr>
-<tr class="" id="lecture-04-supplement">
+<tr data-block="1" data-block-end="true" class="" id="lecture-04-supplement">
 <td class="schedule-date">10 月 28 日 · 周三<br>
 <span class="meta">第 4 讲补充</span>
 </td>
@@ -207,7 +219,7 @@
 </div>
 </td>
 </tr>
-<tr class="" id="lecture-05">
+<tr data-block="2" class="" id="lecture-05">
 <td class="schedule-date">10 月 28 日 · 周三<br>
 <span class="meta">第 5 讲</span>
 </td>
@@ -239,7 +251,7 @@
 </tr>
 </tbody>
 <tbody>
-<tr id="lecture-06" class="week-start">
+<tr data-block="2" id="lecture-06" class="week-start">
 <th class="schedule-week" scope="rowgroup" rowspan="2">教学第 4 周<span class="calendar-week">校历第 9 周</span></th>
 <td class="schedule-date">11 月 3 日 · 周二<br>
 <span class="meta">第 6 讲</span>
@@ -262,7 +274,7 @@
 </div>
 </td>
 </tr>
-<tr id="nov04-cancelled">
+<tr data-block="2" id="nov04-cancelled">
 <td class="schedule-date">11 月 4 日 · 周三<br><span class="deadline-badge">作业 DDL</span></td>
 <td><h4 class="lesson-title">停课，后续课程顺延一次</h4>
 <div class="lesson-tasks task-deadline">
@@ -273,7 +285,7 @@
 </tr>
 </tbody>
  <tbody>
-<tr id="lecture-07" class="week-start">
+<tr data-block="2" data-block-end="true" id="lecture-07" class="week-start">
 <th class="schedule-week" scope="rowgroup" rowspan="2">教学第 5 周<span class="calendar-week">校历第 10 周</span></th>
 <td class="schedule-date">11 月 10 日 · 周二<br>
 <span class="meta">第 7 讲</span>
@@ -285,7 +297,7 @@
 
 </td>
 </tr>
-<tr id="lecture-08" class="">
+<tr data-block="3" id="lecture-08" class="">
 <td class="schedule-date">11 月 11 日 · 周三<br>
 <span class="meta">第 8 讲</span>
 </td>
@@ -302,7 +314,7 @@
 </tr>
 </tbody>
  <tbody>
-<tr id="lecture-09" class="week-start">
+<tr data-block="3" data-block-end="true" id="lecture-09" class="week-start">
 <th class="schedule-week" scope="rowgroup" rowspan="2">教学第 6 周<span class="calendar-week">校历第 11 周</span></th>
 <td class="schedule-date">11 月 17 日 · 周二<br>
 <span class="meta">第 9 讲</span>
@@ -316,7 +328,7 @@
 </div>
 </td>
 </tr>
-<tr id="lecture-10" class="">
+<tr data-block="4" id="lecture-10" class="">
 <td class="schedule-date">11 月 18 日 · 周三<br>
 <span class="meta">第 10 讲</span>
 </td>
@@ -346,7 +358,7 @@
 </tr>
 </tbody>
  <tbody>
-<tr id="lecture-11" class="week-start">
+<tr data-block="4" id="lecture-11" class="week-start">
 <th class="schedule-week" scope="rowgroup" rowspan="2">教学第 7 周<span class="calendar-week">校历第 12 周</span></th>
 <td class="schedule-date">11 月 24 日 · 周二<br>
 <span class="meta">第 11 讲</span>
@@ -367,7 +379,7 @@
 </div>
 </td>
 </tr>
-<tr id="lecture-12" class="">
+<tr data-block="4" id="lecture-12" class="">
 <td class="schedule-date">11 月 25 日 · 周三<br>
 <span class="meta">第 12 讲</span>
 </td>
@@ -389,7 +401,7 @@
 </tr>
 </tbody>
  <tbody>
-<tr id="lecture-13" class="week-start">
+<tr data-block="4" data-block-end="true" id="lecture-13" class="week-start">
 <th class="schedule-week" scope="rowgroup" rowspan="2">教学第 8 周<span class="calendar-week">校历第 13 周</span></th>
 <td class="schedule-date">12 月 1 日 · 周二<br>
 <span class="meta">第 13 讲</span>
@@ -400,7 +412,7 @@
 <p class="textbook">教材：第 1—3 章</p>
 </td>
 </tr>
-<tr id="lecture-14" class="">
+<tr data-block="5" id="lecture-14" class="">
 <td class="schedule-date">12 月 2 日 · 周三<br>
 <span class="meta">第 14 讲</span>
 </td>
@@ -430,7 +442,7 @@
 </tr>
 </tbody>
  <tbody>
-<tr id="lecture-15" class="week-start">
+<tr data-block="5" id="lecture-15" class="week-start">
 <th class="schedule-week" scope="rowgroup" rowspan="2">教学第 9 周<span class="calendar-week">校历第 14 周</span></th>
 <td class="schedule-date">12 月 8 日 · 周二<br>
 <span class="meta">第 15 讲</span>
@@ -451,7 +463,7 @@
 </div>
 </td>
 </tr>
-<tr id="lecture-16" class="">
+<tr data-block="5" data-block-end="true" id="lecture-16" class="">
 <td class="schedule-date">12 月 9 日 · 周三<br>
 <span class="meta">第 16 讲</span>
 </td>
